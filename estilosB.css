@@ -1,0 +1,34 @@
+header{
+	background:#2c3e50;
+	color:#fff;
+}
+
+.main{
+	background: #f2f2f2;
+}
+.color1{
+	background: #34495e;
+	color: #fff;
+}
+aside{
+	background: pink;
+	color: #fff;
+
+
+}
+.a {
+	height: 500px;
+}
+footer{
+	background: #16a085;
+	color: #fff;
+}
+
+.tablilla{
+	background:#dddddd;
+}
+
+.imagen{
+	width:8em ;
+	height: 7em;
+}
