@@ -9,7 +9,7 @@ var panaderiaconfiteria:[
 {"nombre":"medialuna","cantidad":4,"id":0,"precioPorUnidadPorUnidad":4.00,"imagen":"img/pyc/medialuna.jpg"},
 {"nombre":"bizcocho","cantidad":6,"id":1,"precioPorUnidadPorUnidad":0.50,"imagen":"img/pyc/bizcocho.jpg"},
 {"nombre":"torta","cantidad":1,"id":2,"precioPorUnidadPorUnidad":20.00,"imagen":"img/pyc/torta.jpg"},
-{"nombre":"tostada","cantidad":5,"id":3,"precioPorUnidadPorUnidad":0.30,"imagen":"img/pyc/tostada.jpg"}
+{"nombre":"tostada","cantidad":5,"id":3,"precioPorUnidadPorUnidad":0.30,"imagen":"img/pyc/tostada.jpg"},
 ];
 
 var frutas = [
@@ -22,13 +22,13 @@ var dulces = [
 {"nombre":"manteca","cantidad":1,"id":0,"precioPorUnidadPorUnidad":2.00,"imagen":"img/dlc/manteca.jpg"},
 {"nombre":"dulce de leche","cantidad":1,"id":2,"precioPorUnidadPorUnidad":3.50,"imagen":"img/dlc/ddl1.jpg"},
 {"nombre":"miel","cantidad":1,"id":2,"precioPorUnidadPorUnidad":4.00,"imagen":"img/dlc/miel.jpg"},
-{"nombre":"mermelada de frutilla","cantidad":1,"id":3,"precioPorUnidadPorUnidad":3.75,"imagen":"img/dlc/mermfrutilla.jpg"}
+{"nombre":"mermelada de frutilla","cantidad":1,"id":3,"precioPorUnidadPorUnidad":3.75,"imagen":"img/dlc/mermfrutilla.jpg"},
 ];
 
 var taza [
-{"nombre":105, "id" = 0,"precioPorUnidad":11.00, "imagen":"/img/tazas/taza0.jpg"},
-{"nombre":109, "id" = 1,"precioPorUnidad":11.50, "imagen":"/img/tazas/taza1.jpg"},
-{"nombre":112, "id" = 2,"precioPorUnidad":12.00, "imagen":"/img/tazas/taza2.jpg"}
+{"nombre":105, "id"=0,"precioPorUnidad":11.00, "imagen":"/img/tazas/taza0.jpg"},
+{"nombre":109, "id"=1,"precioPorUnidad":11.50, "imagen":"/img/tazas/taza1.jpg"},
+{"nombre":112, "id"=2,"precioPorUnidad":12.00, "imagen":"/img/tazas/taza2.jpg"},
 ];
 
 var bandeja = [
