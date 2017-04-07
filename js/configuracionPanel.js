@@ -2,22 +2,24 @@ var desayunoActual=new Object();
 var opcionesTotales=[];
 
 function cargar(){
-	var bebidas=new Array();
-	desayunoActual.bebidas=bebidas;
-	for (var i = 0; i < opcionesBebidas.length; i++) {
-		var elemento=new Object();
-		elemento.id=opcionesBebidas[i].id;
-		elemento.seleccionado=false;
-		desayunoActual.bebidas[i]=elemento;
-
-			
-	}
 	opcionesTotales[0]=opcionesBebidas;
 	opcionesTotales[1]=frutas;
 	opcionesTotales[2]=dulces;
 	opcionesTotales[3]=panaderiaconfiteria;
 	opcionesTotales[4]=taza;
 	opcionesTotales[5]=bandeja;
+	for (var i = 0; i < opcionesTotales.length; i++) {
+		var opcion = opcionesTotales[i];	
+		var arreglo=new Array();
+		//desayunoActual.arreglo=bebidas;
+		for (var j=0;j<opcionesTotales[i].length;j++){
+			var elemento=new Object();
+			elemento.id=opcion[j].id;
+			elemento.seleccionado=false;
+			arreglo[j]=elemento;
+		}
+		desayunoActual[i]=arreglo;
+	}
 }
 
 
@@ -27,6 +29,7 @@ function mostrar(){
 	var tablas=document.getElementsByTagName("TABLE");
 	for (var l=0;l<tablas.length;l++){
 		var tablaCategoria=tablas[l];
+		tablaCategoria.setAttribute("id",l);
 		var fila;
 		var celda;
 		var k=0;
@@ -61,24 +64,30 @@ function pintarCanvas(event){
 		target=target.parentNode;
 	}
 	var id=target.getAttribute("id");
-	var elemento=opcionesBebidas[id];
 	var check=target.firstChild;
+	var T=target;
+	while(T.tagName!="TABLE"){
+		T=T.parentNode;
+	}
+	var idTabla=T.getAttribute("id");
 
 	while(check.tagName!="INPUT"){
 		check=check.nextSibling;
 	}
-
-	if(desayunoActual.bebidas[id].seleccionado==true){
+	var tablaElegida=opcionesTotales[idTabla];
+	var elemento=tablaElegida[id];
+	var categoria=desayunoActual[idTabla];
+	if(categoria[id].seleccionado==true){
 		document.getElementById("canvas").innerHTML="elemento.imagen";
-		desayunoActual.bebidas[id].seleccionado=false;
+		categoria[id].seleccionado=false;
 
 	}else{
 		document.getElementById("canvas").innerHTML=elemento.imagen;
-		desayunoActual.bebidas[id].seleccionado=true;
+		categoria[id].seleccionado=true;
 	}
 
 
-	actualizarEstado(check,desayunoActual.bebidas[id].seleccionado);
+	actualizarEstado(check,categoria[id].seleccionado);
 
 }
 
