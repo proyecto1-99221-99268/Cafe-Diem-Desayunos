@@ -1,12 +1,5 @@
 var desayunoActual=new Object();
-/*	"bebidas":[], 
-	"comidas":[],
-	"dulces":[],
-	"frutas":[],
-	"bandeja":{}*/
-
-
-
+var opcionesTotales=[];
 
 function cargar(){
 	var bebidas=new Array();
@@ -19,38 +12,47 @@ function cargar(){
 
 			
 	}
+	opcionesTotales[0]=opcionesBebidas;
+	opcionesTotales[1]=frutas;
+	opcionesTotales[2]=dulces;
+	opcionesTotales[3]=panaderiaconfiteria;
+	opcionesTotales[4]=taza;
+	opcionesTotales[5]=bandeja;
 }
 
 
 function mostrar(){
 
 	cargar();
-	var tablaBebidas=document.getElementById("bebidas");
-	var fila;
-	var celda;
-	var k=0;
-	var largo=Math.ceil(opcionesBebidas.length/3);
-	for(var i=0; i<largo; i++){
-		fila=document.createElement("TR");
-		for (var j = 0; j < 3; j++) {
-			if(k<opcionesBebidas.length){
-				celda=document.createElement("TD");
-				var imagen=document.createElement("IMG");
-				imagen.setAttribute("src", opcionesBebidas[k].imagen);
-				imagen.setAttribute("class", "imagen");
-				celda.setAttribute("onclick", "pintarCanvas(event)");
-				celda.setAttribute("id", opcionesBebidas[k].id);
-				var input=document.createElement("INPUT");
-				input.setAttribute("type", "checkbox");
-				celda.appendChild(imagen);
-				celda.appendChild(input);
-				fila.appendChild(celda);
-				k++;
+	var tablas=document.getElementsByTagName("TABLE");
+	for (var l=0;l<tablas.length;l++){
+		var tablaCategoria=tablas[l];
+		var fila;
+		var celda;
+		var k=0;
+		var opciones = opcionesTotales[l];
+		var largo=Math.ceil(opciones.length/3);
+		for(var i=0; i<largo; i++){
+			fila=document.createElement("TR");
+			for (var j = 0; j < 3; j++) {
+				if(k<opciones.length){
+					celda=document.createElement("TD");
+					var imagen=document.createElement("IMG");
+					imagen.setAttribute("src", opciones[k].imagen);
+					imagen.setAttribute("class", "imagen");
+					celda.setAttribute("onclick", "pintarCanvas(event)");
+					celda.setAttribute("id", opciones[k].id);
+					var input=document.createElement("INPUT");
+					input.setAttribute("type", "checkbox");
+					celda.appendChild(imagen);
+					celda.appendChild(input);
+					fila.appendChild(celda);
+					k++;
+				}
 			}
+			tablaCategoria.appendChild(fila);
 		}
-		tablaBebidas.appendChild(fila);
 	}
-
 }
 
 function pintarCanvas(event){

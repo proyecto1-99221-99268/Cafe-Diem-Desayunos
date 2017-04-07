@@ -1,37 +1,38 @@
 var opcionesBebidas=[
-	{"nombre":"leche","cantidad":0,"id":0,"precioPorUnidadPorUnidad":5.00,"imagen":"img/bebida/leche.jpg"},
-	{"nombre":"cafe","cantidad":0,"id":1,"precioPorUnidadPorUnidad":10.00,"imagen":"img/bebida/cafe1.png"},
-	{"nombre":"te","cantidad":0,"id":2,"precioPorUnidadPorUnidad":8.00,"imagen":"img/bebida/te1.jpg"},
-	{"nombre":"jugo","cantidad":0,"id":3,"precioPorUnidadPorUnidad":6.00,"imagen":"img/bebida/jugo.gif"},
-	{"nombre":"yogur","cantidad":0,"id":4,"precioPorUnidadPorUnidad":9.00,"imagen":"img/bebida/yogur.jpg"},
+	{"nombre":"leche","cantidad":0,"id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png"},
+	{"nombre":"cafe","cantidad":0,"id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe1.png"},
+	{"nombre":"te","cantidad":0,"id":2,"precioPorUnidad":8.00,"imagen":"img/bebida/te.png"},
+	{"nombre":"jugo","cantidad":0,"id":3,"precioPorUnidad":6.00,"imagen":"img/bebida/jugo.gif"},
+	{"nombre":"yogur","cantidad":0,"id":4,"precioPorUnidad":9.00,"imagen":"img/bebida/yogur.png"},
 	];
-var panaderiaconfiteria:[
-{"nombre":"medialuna","cantidad":4,"id":0,"precioPorUnidadPorUnidad":4.00,"imagen":"img/pyc/medialuna.jpg"},
+
+var panaderiaconfiteria=[
+{"nombre":"medialuna","cantidad":4,"id":0,"precioPorUnidadPorUnidad":4.00,"imagen":"img/pyc/medialuna.png"},
 {"nombre":"bizcocho","cantidad":6,"id":1,"precioPorUnidadPorUnidad":0.50,"imagen":"img/pyc/bizcocho.jpg"},
 {"nombre":"torta","cantidad":1,"id":2,"precioPorUnidadPorUnidad":20.00,"imagen":"img/pyc/torta.jpg"},
 {"nombre":"tostada","cantidad":5,"id":3,"precioPorUnidadPorUnidad":0.30,"imagen":"img/pyc/tostada.jpg"},
 ];
 
-var frutas = [
+var frutas=[
 {"nombre":"manzana","cantidad":1,"id":0,"precioPorUnidadPorUnidad":3.00,"imagen":"img/fr/manzana.jpg"},
 {"nombre":"frutilla","cantidad":0,"id":1,"precioPorUnidadPorUnidad":13.00,"imagen":"img/fr/frutilla.jpg"},
 {"nombre":"naranja","cantidad":0,"id":2,"precioPorUnidadPorUnidad":2.00,"imagen":"img/fr/naranja.jpg"},
 ];
 
-var dulces = [
+var dulces=[
 {"nombre":"manteca","cantidad":1,"id":0,"precioPorUnidadPorUnidad":2.00,"imagen":"img/dlc/manteca.jpg"},
 {"nombre":"dulce de leche","cantidad":1,"id":2,"precioPorUnidadPorUnidad":3.50,"imagen":"img/dlc/ddl1.jpg"},
 {"nombre":"miel","cantidad":1,"id":2,"precioPorUnidadPorUnidad":4.00,"imagen":"img/dlc/miel.jpg"},
 {"nombre":"mermelada de frutilla","cantidad":1,"id":3,"precioPorUnidadPorUnidad":3.75,"imagen":"img/dlc/mermfrutilla.jpg"},
 ];
 
-var taza [
-{"nombre":105, "id"=0,"precioPorUnidad":11.00, "imagen":"/img/tazas/taza0.jpg"},
-{"nombre":109, "id"=1,"precioPorUnidad":11.50, "imagen":"/img/tazas/taza1.jpg"},
-{"nombre":112, "id"=2,"precioPorUnidad":12.00, "imagen":"/img/tazas/taza2.jpg"},
+var taza=[
+{"nombre":105, "id":0,"precioPorUnidad":11.00, "imagen":"/img/tazas/taza0.jpg"},
+{"nombre":109, "id":1,"precioPorUnidad":11.50, "imagen":"/img/tazas/taza1.jpg"},
+{"nombre":112, "id":2,"precioPorUnidad":12.00, "imagen":"/img/tazas/taza2.jpg"},
 ];
 
-var bandeja = [
+var bandeja=[
 {"id":0,"nombre":"madera","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoMadera.jpg"},
 {"id":1,"nombre":"blanco","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoBlanco.jpg"},
 {"id":2,"nombre":"celeste","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoCeleste.jpg"},
