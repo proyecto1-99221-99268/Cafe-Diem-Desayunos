@@ -2,43 +2,45 @@ var opcionesBebidas=[
 	{"nombre":"leche","cantidad":0,"id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png"},
 	{"nombre":"cafe","cantidad":0,"id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe1.png"},
 	{"nombre":"te","cantidad":0,"id":2,"precioPorUnidad":8.00,"imagen":"img/bebida/te.png"},
-	{"nombre":"jugo","cantidad":0,"id":3,"precioPorUnidad":6.00,"imagen":"img/bebida/jugo.gif"},
+	{"nombre":"jugo","cantidad":0,"id":3,"precioPorUnidad":6.00,"imagen":"img/bebida/jugo.png"},
 	{"nombre":"yogur","cantidad":0,"id":4,"precioPorUnidad":9.00,"imagen":"img/bebida/yogur.png"},
 	];
 
 var panaderiaconfiteria=[
 {"nombre":"medialuna","cantidad":4,"id":0,"precioPorUnidadPorUnidad":4.00,"imagen":"img/pyc/medialuna.png"},
-{"nombre":"bizcocho","cantidad":6,"id":1,"precioPorUnidadPorUnidad":0.50,"imagen":"img/pyc/bizcocho.jpg"},
-{"nombre":"torta","cantidad":1,"id":2,"precioPorUnidadPorUnidad":20.00,"imagen":"img/pyc/torta.jpg"},
-{"nombre":"tostada","cantidad":5,"id":3,"precioPorUnidadPorUnidad":0.30,"imagen":"img/pyc/tostada.jpg"},
+{"nombre":"bizcocho","cantidad":6,"id":1,"precioPorUnidadPorUnidad":0.50,"imagen":"img/pyc/bizcocho.png"},
+{"nombre":"torta","cantidad":1,"id":2,"precioPorUnidadPorUnidad":20.00,"imagen":"img/pyc/torta.png"},
+{"nombre":"tostada","cantidad":5,"id":3,"precioPorUnidadPorUnidad":0.30,"imagen":"img/pyc/tostadas.png"},
+{"nombre":"magdalenas","cantidad":5,"id":4,"precioPorUnidadPorUnidad":0.40,"imagen":"img/pyc/magdalenas.png"},
 ];
 
 var frutas=[
-{"nombre":"manzana","cantidad":1,"id":0,"precioPorUnidadPorUnidad":3.00,"imagen":"img/fr/manzana.jpg"},
-{"nombre":"frutilla","cantidad":0,"id":1,"precioPorUnidadPorUnidad":13.00,"imagen":"img/fr/frutilla.jpg"},
-{"nombre":"naranja","cantidad":0,"id":2,"precioPorUnidadPorUnidad":2.00,"imagen":"img/fr/naranja.jpg"},
+{"nombre":"manzana","cantidad":1,"id":0,"precioPorUnidadPorUnidad":3.00,"imagen":"img/fr/manzana.png"},
+{"nombre":"frutilla","cantidad":0,"id":1,"precioPorUnidadPorUnidad":13.00,"imagen":"img/fr/frutillas.png"},
+{"nombre":"naranja","cantidad":0,"id":2,"precioPorUnidadPorUnidad":2.00,"imagen":"img/fr/naranja.png"},
 ];
 
 var dulces=[
-{"nombre":"manteca","cantidad":1,"id":0,"precioPorUnidadPorUnidad":2.00,"imagen":"img/dlc/manteca.jpg"},
-{"nombre":"dulce de leche","cantidad":1,"id":2,"precioPorUnidadPorUnidad":3.50,"imagen":"img/dlc/ddl1.jpg"},
-{"nombre":"miel","cantidad":1,"id":2,"precioPorUnidadPorUnidad":4.00,"imagen":"img/dlc/miel.jpg"},
-{"nombre":"mermelada de frutilla","cantidad":1,"id":3,"precioPorUnidadPorUnidad":3.75,"imagen":"img/dlc/mermfrutilla.jpg"},
+{"nombre":"manteca","cantidad":1,"id":0,"precioPorUnidadPorUnidad":2.00,"imagen":"img/dlc/manteca.png"},
+{"nombre":"dulce de leche","cantidad":1,"id":2,"precioPorUnidadPorUnidad":3.50,"imagen":"img/dlc/ddll.png"},
+{"nombre":"miel","cantidad":1,"id":2,"precioPorUnidadPorUnidad":4.00,"imagen":"img/dlc/miel.png"},
+{"nombre":"mermelada de frutilla","cantidad":1,"id":3,"precioPorUnidadPorUnidad":3.75,"imagen":"img/dlc/mermFrutilla.png"},
 ];
 
 var taza=[
-{"nombre":"taza roja", "id":0,"precioPorUnidad":11.00, "imagen":"/img/tazas/taza0.jpg"},
-{"nombre":"taza azul", "id":1,"precioPorUnidad":11.50, "imagen":"/img/tazas/taza1.jpg"},
-{"nombre":"taza blanca", "id":2,"precioPorUnidad":12.00, "imagen":"/img/tazas/taza2.jpg"},
+{"nombre":"taza naranja", "id":0,"precioPorUnidad":11.00, "imagen":"img/tazas/tazaNaranja.png"},
+{"nombre":"taza roja", "id":1,"precioPorUnidad":11.50, "imagen":"img/tazas/taza roja.png"},
+{"nombre":"taza azul", "id":2,"precioPorUnidad":12.00, "imagen":"img/tazas/taza azul.png"},
+{"nombre":"taza verde", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza verde.png"},
+{"nombre":"taza blanza con cuchara rosa", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara rosa.png"},
+{"nombre":"taza blanza con cuchara naranja", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara naranja.png"},
+{"nombre":"taza blanza con cuchara azul", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara azul.png"},
 ];
 
 var bandeja=[
-{"id":0,"nombre":"madera clasico","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoMadera.jpg"},
-{"id":1,"nombre":"blanco clasico","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoBlanco.jpg"},
-{"id":2,"nombre":"celeste clasico","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoCeleste.jpg"},
-{"id":3,"nombre":"madera canasta","precioPorUnidad":30.00,"imagen":"/img/bandeja/canastaMadera.jpg"},
-{"id":4,"nombre":"blanco canasta","precioPorUnidad":30.00,"imagen":"/img/bandeja/canastaBlanco.jpg"},
-{"id":5,"nombre":"celeste canasta","precioPorUnidad":30.00,"imagen":"/img/bandeja/canastaCeleste.jpg"},
+{"id":0,"nombre":"Bandeja de madera","precioPorUnidad":20.00,"imagen":"img/bandeja/bandejaMadera.png"},
+{"id":1,"nombre":"tabla de madera","precioPorUnidad":20.00,"imagen":"img/bandeja/tabla madera.png"},
+{"id":2,"nombre":"canasta de madera","precioPorUnidad":20.00,"imagen":"img/bandeja/canasta madera.png"},
 ];
 
 
