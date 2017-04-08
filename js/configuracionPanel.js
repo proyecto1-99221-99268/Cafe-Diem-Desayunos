@@ -43,6 +43,7 @@ function mostrar(){
 					var imagen=document.createElement("IMG");
 					imagen.setAttribute("src", opciones[k].imagen);
 					imagen.setAttribute("class", "imagen");
+					imagen.setAttribute("alt",opciones[k].nombre)
 					celda.setAttribute("onclick", "pintarCanvas(event)");
 					celda.setAttribute("id", opciones[k].id);
 					var input=document.createElement("INPUT");

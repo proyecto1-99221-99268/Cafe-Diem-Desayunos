@@ -27,18 +27,18 @@ var dulces=[
 ];
 
 var taza=[
-{"nombre":105, "id":0,"precioPorUnidad":11.00, "imagen":"/img/tazas/taza0.jpg"},
-{"nombre":109, "id":1,"precioPorUnidad":11.50, "imagen":"/img/tazas/taza1.jpg"},
-{"nombre":112, "id":2,"precioPorUnidad":12.00, "imagen":"/img/tazas/taza2.jpg"},
+{"nombre":"taza roja", "id":0,"precioPorUnidad":11.00, "imagen":"/img/tazas/taza0.jpg"},
+{"nombre":"taza azul", "id":1,"precioPorUnidad":11.50, "imagen":"/img/tazas/taza1.jpg"},
+{"nombre":"taza blanca", "id":2,"precioPorUnidad":12.00, "imagen":"/img/tazas/taza2.jpg"},
 ];
 
 var bandeja=[
-{"id":0,"nombre":"madera","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoMadera.jpg"},
-{"id":1,"nombre":"blanco","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoBlanco.jpg"},
-{"id":2,"nombre":"celeste","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoCeleste.jpg"},
-{"id":3,"nombre":"madera","precioPorUnidad":30.00,"imagen":"/img/bandeja/canastaMadera.jpg"},
-{"id":4,"nombre":"blanco","precioPorUnidad":30.00,"imagen":"/img/bandeja/canastaBlanco.jpg"},
-{"id":5,"nombre":"celeste","precioPorUnidad":30.00,"imagen":"/img/bandeja/canastaCeleste.jpg"},
+{"id":0,"nombre":"madera clasico","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoMadera.jpg"},
+{"id":1,"nombre":"blanco clasico","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoBlanco.jpg"},
+{"id":2,"nombre":"celeste clasico","precioPorUnidad":20.00,"imagen":"/img/bandeja/clasicoCeleste.jpg"},
+{"id":3,"nombre":"madera canasta","precioPorUnidad":30.00,"imagen":"/img/bandeja/canastaMadera.jpg"},
+{"id":4,"nombre":"blanco canasta","precioPorUnidad":30.00,"imagen":"/img/bandeja/canastaBlanco.jpg"},
+{"id":5,"nombre":"celeste canasta","precioPorUnidad":30.00,"imagen":"/img/bandeja/canastaCeleste.jpg"},
 ];
 
 
