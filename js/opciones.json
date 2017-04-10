@@ -1,6 +1,6 @@
 var opcionesBebidas=[
 	{"nombre":"leche","cantidad":0,"id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png"},
-	{"nombre":"cafe","cantidad":0,"id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe1.jpg"},
+	{"nombre":"cafe","cantidad":0,"id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe.png"},
 	{"nombre":"te","cantidad":0,"id":2,"precioPorUnidad":8.00,"imagen":"img/bebida/te.png"},
 	{"nombre":"jugo","cantidad":0,"id":3,"precioPorUnidad":6.00,"imagen":"img/bebida/jugo.png"},
 	{"nombre":"yogur","cantidad":0,"id":4,"precioPorUnidad":9.00,"imagen":"img/bebida/yogur.png"},
