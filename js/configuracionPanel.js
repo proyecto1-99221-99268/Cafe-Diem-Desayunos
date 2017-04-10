@@ -51,7 +51,7 @@ function mostrar(){
 					celda.setAttribute("onclick", "pintarCanvas(event)");
 					celda.setAttribute("id", opciones[k].id);
 					input=document.createElement("INPUT");
-					if(l<4){
+					if(opcionesTotales[l]!=taza && opcionesTotales[l]!=bandeja){
 						input.setAttribute("type", "checkbox");
 					}else{
 						input.setAttribute("type", "radio");
@@ -69,7 +69,7 @@ function mostrar(){
 }
 
 
-//pintarCanvas(+event)
+ 
 function pintarCanvas(event){
 	var target=event.target;
 	while(target.tagName!="TD"){
@@ -98,13 +98,11 @@ function pintarCanvas(event){
 		setearDibujo(elemento.imagen);
 		categoria[id].seleccionado=true;
 	}
-
-
 	actualizarEstado(check,categoria[id].seleccionado);
 
 }
 
-//actualizarEstado(+check, +seleccionado)
+
 function actualizarEstado(check,seleccionado){
 
 	if(!seleccionado)
