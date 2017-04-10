@@ -16,7 +16,7 @@ function cargar(){
 		//desayunoActual.arreglo=bebidas;
 		for (var j=0;j<opcion.length;j++){
 			var elemento=new Object();
-			elemento.id=opcion[j].id;
+			elemento.id=opcion[j].id; //voy construyendo los elems para la lista de selección
 			elemento.seleccionado=false;
 			arreglo[j]=elemento;
 		}
@@ -41,16 +41,22 @@ function mostrar(){
 			fila=document.createElement("TR");
 			for (var j = 0; j < 3; j++) {
 				if(k<opciones.length){
+					var imagen, input;
 					celda=document.createElement("TD");
-					var imagen=document.createElement("IMG");
+					imagen=document.createElement("IMG");
 					imagen.setAttribute("src", opciones[k].imagen);
 					imagen.setAttribute("class", "imagen");
 					imagen.setAttribute("alt",opciones[k].nombre);
 					celda.setAttribute("class","ui-widget-content");
 					celda.setAttribute("onclick", "pintarCanvas(event)");
 					celda.setAttribute("id", opciones[k].id);
-					var input=document.createElement("INPUT");
-					input.setAttribute("type", "checkbox");
+					input=document.createElement("INPUT");
+					if(l<4){
+						input.setAttribute("type", "checkbox");
+					}else{
+						input.setAttribute("type", "radio");
+						input.setAttribute("name", opciones.nombre);
+					}
 					celda.appendChild(imagen);
 					celda.appendChild(input);
 					fila.appendChild(celda);
@@ -62,6 +68,8 @@ function mostrar(){
 	}
 }
 
+
+//pintarCanvas(+event)
 function pintarCanvas(event){
 	var target=event.target;
 	while(target.tagName!="TD"){
@@ -96,6 +104,7 @@ function pintarCanvas(event){
 
 }
 
+//actualizarEstado(+check, +seleccionado)
 function actualizarEstado(check,seleccionado){
 
 	if(!seleccionado)
@@ -104,10 +113,13 @@ function actualizarEstado(check,seleccionado){
 		check.checked=true;
 }
 
+
+
 function setearDibujo(source){
 
  $( function() {
-    $( ".ui-widget-content" ).draggable();
+    $( ".ui-widget-content" ).draggable().resizable();
+    $( ".ui-widget-content" ).resizable();
     $( "#canvas" ).droppable({
       drop: function( event, ui ) {
         $( this )
