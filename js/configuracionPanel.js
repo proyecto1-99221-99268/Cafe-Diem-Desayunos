@@ -1,6 +1,16 @@
-var desayunoActual=new Object();
+var desayunoActual=[];
+// =new Object();
+var capas = [];
 var opcionesTotales=[];
-var $canvas;
+var escenario;
+
+function KineticCanvas(){
+	 	escenario = new Kinetic.Stage({
+        container: 'miCanvas',
+        width: 480,
+        height: 400,
+    });
+}
 	
 
 function cargar(){
@@ -27,7 +37,7 @@ function cargar(){
 
 function mostrar(){
 	cargar();
-  	$canvas = $('#canvas');
+  	KineticCanvas();
 	var tablas=document.getElementsByTagName("TABLE");
 	for (var l=0;l<tablas.length;l++){
 		var tablaCategoria=tablas[l];
@@ -47,7 +57,7 @@ function mostrar(){
 					imagen.setAttribute("src", opciones[k].imagen);
 					imagen.setAttribute("class", "imagen");
 					imagen.setAttribute("alt",opciones[k].nombre);
-					celda.setAttribute("class","ui-widget-content");
+					//celda.setAttribute("class","ui-widget-content");
 					celda.setAttribute("onclick", "pintarCanvas(event)");
 					celda.setAttribute("id", opciones[k].id);
 					input=document.createElement("INPUT");
@@ -90,12 +100,13 @@ function pintarCanvas(event){
 	var elemento=tablaElegida[id];
 	var categoria=desayunoActual[idTabla];
 	if(categoria[id].seleccionado==true){
-		//document.getElementById("canvas").innerHTML="elemento.imagen";
+		//document.getElementById("miCanvas").innerHTML="elemento.imagen";
 		categoria[id].seleccionado=false;
+		quitarDibujo(elemento.nombre);
 
 	}else{
-		//document.getElementById("canvas").innerHTML=elemento.imagen;
-		setearDibujo(elemento.imagen);
+		//document.getElementById("miCanvas").innerHTML=elemento.imagen;
+		setearDibujo(elemento.imagen,elemento.nombre);
 		categoria[id].seleccionado=true;
 	}
 	actualizarEstado(check,categoria[id].seleccionado);
@@ -109,34 +120,61 @@ function actualizarEstado(check,seleccionado){
 		check.checked=false;
 	else
 		check.checked=true;
+	calcularPrecio();
 }
 
 
 
-function setearDibujo(source){
-
- $( function() {
-    $( ".ui-widget-content" ).draggable().resizable();
-    $( ".ui-widget-content" ).resizable();
-    $( "#canvas" ).droppable({
-      drop: function( event, ui ) {
-        $( this )
-          .addClass( "ui-state-highlight" )
-          .find( "p" )
-          .html( "Dropped!" );
-      }
+function setearDibujo(source,nombre){
+	
+	var nuevaCapa = new Kinetic.Layer({id:nombre});
+	
+	//capas[nombre]=nuevaCapa;
+	var imagen = new Image();
+    imagen.src = source;
+ 
+    var imgFondo = new Kinetic.Image({
+        image: imagen,
+        draggable: true,
+        x: 0,
+        y: 0,
+        width: 75,
+        height: 100
     });
-  } );
-  
+ 	nuevaCapa.add(imgFondo);
+    escenario.add(nuevaCapa);
+    escenario.draw();
+}
+function quitarDibujo(nombre){
+	var layers = escenario.getLayers();
+	var capa;
+	var i=0;
+	var corta=false;
+	while (i<layers.length && !corta){
+		if (layers[i].attrs.id==nombre)
+			{capa = layers[i];
+			corta=true;}
+		i++;
+	}
+
+	capa.removeChildren();
+	capa.remove();
+	escenario.draw();
 
 }
 
 
+function calcularPrecio(){
+	var precio = 0;
+	for (var i=0 ; i<desayunoActual.length;i++){
+		var op = desayunoActual[i];
+		for (var j = 0; j <op.length; j++) {
+			if (op[j].seleccionado==true){
+				var categoria= opcionesTotales[i];
+				precio+=categoria[j].precioPorUnidad;
+			}
+		}
+	}
+	$("#precio").text("$"+precio);
 
-
-
-
-
-
-
-
+}
