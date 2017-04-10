@@ -1,5 +1,7 @@
 var desayunoActual=new Object();
 var opcionesTotales=[];
+var $canvas;
+	
 
 function cargar(){
 	opcionesTotales[0]=opcionesBebidas;
@@ -12,7 +14,7 @@ function cargar(){
 		var opcion = opcionesTotales[i];	
 		var arreglo=new Array();
 		//desayunoActual.arreglo=bebidas;
-		for (var j=0;j<opcionesTotales[i].length;j++){
+		for (var j=0;j<opcion.length;j++){
 			var elemento=new Object();
 			elemento.id=opcion[j].id;
 			elemento.seleccionado=false;
@@ -24,8 +26,8 @@ function cargar(){
 
 
 function mostrar(){
-
 	cargar();
+  	$canvas = $('#canvas');
 	var tablas=document.getElementsByTagName("TABLE");
 	for (var l=0;l<tablas.length;l++){
 		var tablaCategoria=tablas[l];
@@ -43,7 +45,8 @@ function mostrar(){
 					var imagen=document.createElement("IMG");
 					imagen.setAttribute("src", opciones[k].imagen);
 					imagen.setAttribute("class", "imagen");
-					imagen.setAttribute("alt",opciones[k].nombre)
+					imagen.setAttribute("alt",opciones[k].nombre);
+					celda.setAttribute("class","ui-widget-content");
 					celda.setAttribute("onclick", "pintarCanvas(event)");
 					celda.setAttribute("id", opciones[k].id);
 					var input=document.createElement("INPUT");
@@ -79,11 +82,12 @@ function pintarCanvas(event){
 	var elemento=tablaElegida[id];
 	var categoria=desayunoActual[idTabla];
 	if(categoria[id].seleccionado==true){
-		document.getElementById("canvas").innerHTML="elemento.imagen";
+		//document.getElementById("canvas").innerHTML="elemento.imagen";
 		categoria[id].seleccionado=false;
 
 	}else{
-		document.getElementById("canvas").innerHTML=elemento.imagen;
+		//document.getElementById("canvas").innerHTML=elemento.imagen;
+		setearDibujo(elemento.imagen);
 		categoria[id].seleccionado=true;
 	}
 
@@ -100,7 +104,22 @@ function actualizarEstado(check,seleccionado){
 		check.checked=true;
 }
 
+function setearDibujo(source){
 
+ $( function() {
+    $( ".ui-widget-content" ).draggable();
+    $( "#canvas" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+          .html( "Dropped!" );
+      }
+    });
+  } );
+  
+
+}
 
 
 
