@@ -31,10 +31,10 @@ var taza=[
 {"nombre":"taza naranja", "id":0,"precioPorUnidad":11.00, "imagen":"img/tazas/tazaNaranja.png"},
 {"nombre":"taza roja", "id":1,"precioPorUnidad":11.50, "imagen":"img/tazas/taza roja.png"},
 {"nombre":"taza azul", "id":2,"precioPorUnidad":12.00, "imagen":"img/tazas/taza azul.png"},
-{"nombre":"taza verde", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza verde.png"},
+{"nombre":"taza verde", "id":3,"precioPorUnidad":12.00, "imagen":"img/tazas/taza verde.png"},
 {"nombre":"taza blanza con cuchara rosa", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara rosa.png"},
-{"nombre":"taza blanza con cuchara naranja", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara naranja.png"},
-{"nombre":"taza blanza con cuchara azul", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara azul.png"},
+{"nombre":"taza blanza con cuchara naranja", "id":5,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara naranja.png"},
+{"nombre":"taza blanza con cuchara azul", "id":6,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara azul.png"},
 ];
 
 var bandeja=[

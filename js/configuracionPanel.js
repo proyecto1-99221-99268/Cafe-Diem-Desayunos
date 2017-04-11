@@ -108,6 +108,15 @@ function pintarCanvas(event){
 		//document.getElementById("miCanvas").innerHTML=elemento.imagen;
 		setearDibujo(elemento.imagen,elemento.nombre);
 		categoria[id].seleccionado=true;
+
+		if(categoria==taza || categoria==bandeja){
+			for(var i=0; i<tablaElegida.length; i++){
+				if(i!=id && categoria[i].seleccionado==true){
+					categoria[i].seleccionado=false;
+					quitarDibujo(tablaElegida[i].nombre);
+				}
+			}
+		}
 	}
 	actualizarEstado(check,categoria[id].seleccionado);
 
