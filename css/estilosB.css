@@ -32,3 +32,15 @@ footer{
 	width:8em ;
 	height: 8em;
 }
+
+#miCanvas{
+	border: 1px solid #000;
+	
+
+
+}
+
+.noPadding{
+padding: 0px 0px 0px 0px;
+
+}

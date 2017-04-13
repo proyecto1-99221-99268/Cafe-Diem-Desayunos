@@ -5,7 +5,7 @@
 	<title>Desayunos El Andrés</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/estilosB.css">
+	<link rel="stylesheet" type="text/css" id="cssArchivo"> 
 <!--   	<link rel="stylesheet" src="css/jquery-ui.css">
  --> 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   	<!-- <script src="js/jquery-ui.js"></script> -->
@@ -13,11 +13,16 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/opciones.json"></script>
 	<script type="text/javascript"  src="js/configuracionPanel.js"></script>
-
-  
+	<script type="text/javascript"  src="js/cambiarCSS.js"></script>
+	<script>
+		$(document).ready(function(){
+			mostrar();
+			cargarCSS();
+		})
+	</script>
 
 </head>
-<body onload="mostrar()">
+<body>
 	<div class="container">
 		<header>
 			<div class="container">
@@ -25,10 +30,8 @@
 			</div>
 		</header>
 		<section class="main row">
-			<div  id="miCanvas" class="col-xs-12 col-sm-6 col-md-6">
-			
+			<div  id="miCanvas" class="noPadding col-xs-12 col-sm-6 col-md-6">
 			</div>
-
 			<aside class=" col-xs-12 col-sm-6 col-md-6">
 				<ul class="nav nav-pills">
 				  <li class="active"><a data-toggle="pill" href="#Bebidas">Bebidas</a></li>
@@ -72,8 +75,11 @@
 				  </div>
 				</div>			
 			</aside>
-			<div id="precio" class="col-xs-12 col-sm-12 col-md-12" >
+			<div id="precio" class="col-xs-11 col-sm-11 col-md-11" >
 				$0.0
+			</div>
+			<div id="cambiarCSSDIV" class="col-xs-1 col-sm-1 col-md-1">
+				<button id="cambiarCSS">¡Cambiar estilo!</button>
 			</div>
 		</section>
 

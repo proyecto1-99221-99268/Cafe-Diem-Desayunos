@@ -1,19 +1,24 @@
-var desayunoActual=[];
+var desayunoPersonalizado=[];
+var desayunos   = [];
 // =new Object();
 var capas = [];
 var opcionesTotales=[];
 var escenario;
+var desayunoElegido=[]; //para clasico, especial y matero
+var opcionesElegido=[];
 
-function KineticCanvas(){
+function KineticCanvas(n){
 	 	escenario = new Kinetic.Stage({
         container: 'miCanvas',
-        width: 480,
-        height: 400,
+  		width: n,
+        height: 500,
+
     });
 }
 	
 
 function cargar(){
+
 	opcionesTotales[0]=opcionesBebidas;
 	opcionesTotales[1]=frutas;
 	opcionesTotales[2]=dulces;
@@ -23,21 +28,27 @@ function cargar(){
 	for (var i = 0; i < opcionesTotales.length; i++) {
 		var opcion = opcionesTotales[i];	
 		var arreglo=new Array();
-		//desayunoActual.arreglo=bebidas;
+		//desayunoPersonalizado.arreglo=bebidas;
 		for (var j=0;j<opcion.length;j++){
-			var elemento=new Object();
-			elemento.id=opcion[j].id; //voy construyendo los elems para la lista de selección
-			elemento.seleccionado=false;
-			arreglo[j]=elemento;
+			//var elemento=new Object();
+			//elemento.id=opcion[j].id; //voy construyendo los elems para la lista de selección
+			//elemento.seleccionado=false;
+			arreglo[j]=false;
 		}
-		desayunoActual[i]=arreglo;
+		desayunoPersonalizado[i]=arreglo;
 	}
+
+	desayunos["personalizado"]=desayunoPersonalizado;
+//	cargarEspecificos();
+
 }
 
 
 function mostrar(){
 	cargar();
-  	KineticCanvas();
+
+	var n = document.getElementById("miCanvas").offsetWidth;
+  	KineticCanvas(n);
 	var tablas=document.getElementsByTagName("TABLE");
 	for (var l=0;l<tablas.length;l++){
 		var tablaCategoria=tablas[l];
@@ -98,33 +109,32 @@ function pintarCanvas(event){
 	}
 	var tablaElegida=opcionesTotales[idTabla];
 	var elemento=tablaElegida[id];
-	var categoria=desayunoActual[idTabla];
-	if(categoria[id].seleccionado==true){
+	var categoria=desayunoPersonalizado[idTabla];
+	if(categoria[id]==true){
 		//document.getElementById("miCanvas").innerHTML="elemento.imagen";
-		categoria[id].seleccionado=false;
+		categoria[id]=false;
 		quitarDibujo(elemento.nombre);
 
 	}else{
 		//document.getElementById("miCanvas").innerHTML=elemento.imagen;
 		setearDibujo(elemento.imagen,elemento.nombre);
-		categoria[id].seleccionado=true;
+		categoria[id]=true;
 
-		if(categoria==taza || categoria==bandeja){
+		if(idTabla==4 || idTabla==5){
 			for(var i=0; i<tablaElegida.length; i++){
-				if(i!=id && categoria[i].seleccionado==true){
-					categoria[i].seleccionado=false;
+				if(i!=id && categoria[i]==true){
+					categoria[i]=false;
 					quitarDibujo(tablaElegida[i].nombre);
 				}
 			}
 		}
 	}
-	actualizarEstado(check,categoria[id].seleccionado);
+	actualizarEstado(check,categoria[id]);
 
 }
 
 
 function actualizarEstado(check,seleccionado){
-
 	if(!seleccionado)
 		check.checked=false;
 	else
@@ -135,14 +145,11 @@ function actualizarEstado(check,seleccionado){
 
 
 function setearDibujo(source,nombre){
-	
 	var nuevaCapa = new Kinetic.Layer({id:nombre});
-	
 	//capas[nombre]=nuevaCapa;
 	var imagen = new Image();
     imagen.src = source;
- 
-    var imgFondo = new Kinetic.Image({
+ 	var imgFondo = new Kinetic.Image({
         image: imagen,
         draggable: true,
         x: 0,
@@ -154,6 +161,7 @@ function setearDibujo(source,nombre){
     escenario.add(nuevaCapa);
     escenario.draw();
 }
+
 function quitarDibujo(nombre){
 	var layers = escenario.getLayers();
 	var capa;
@@ -175,15 +183,19 @@ function quitarDibujo(nombre){
 
 function calcularPrecio(){
 	var precio = 0;
-	for (var i=0 ; i<desayunoActual.length;i++){
-		var op = desayunoActual[i];
+	for (var i=0 ; i<desayunoPersonalizado.length;i++){
+		var op = desayunoPersonalizado[i];
 		for (var j = 0; j <op.length; j++) {
-			if (op[j].seleccionado==true){
+			if (op[j]){
 				var categoria= opcionesTotales[i];
 				precio+=categoria[j].precioPorUnidad;
 			}
 		}
 	}
 	$("#precio").text("$"+precio);
+}
+
+
+function cargarEspecifico(){
 
 }

@@ -1,30 +1,31 @@
 var opcionesBebidas=[
-	{"nombre":"leche","cantidad":0,"id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png"},
-	{"nombre":"cafe","cantidad":0,"id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe.png"},
-	{"nombre":"te","cantidad":0,"id":2,"precioPorUnidad":8.00,"imagen":"img/bebida/te.png"},
-	{"nombre":"jugo","cantidad":0,"id":3,"precioPorUnidad":6.00,"imagen":"img/bebida/jugo.png"},
-	{"nombre":"yogur","cantidad":0,"id":4,"precioPorUnidad":9.00,"imagen":"img/bebida/yogur.png"},
+	{"nombre":"leche","id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png"},
+	{"nombre":"cafe","id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe2.png"},
+	{"nombre":"te","id":2,"precioPorUnidad":8.00,"imagen":"img/bebida/te.png"},
+	{"nombre":"jugo","id":3,"precioPorUnidad":6.00,"imagen":"img/bebida/jugo.png"},
+	{"nombre":"yogur","id":4,"precioPorUnidad":9.00,"imagen":"img/bebida/yogur.png"},
+	{"nombre":"mate","id":5,"precioPorUnidad":20.00,"imagen":"img/bebida/mate.png"},
 	];
 
 var panaderiaconfiteria=[
-{"nombre":"medialuna","cantidad":4,"id":0,"precioPorUnidad":4.00,"imagen":"img/pyc/medialuna.png"},
-{"nombre":"bizcochuelo","cantidad":6,"id":1,"precioPorUnidad":0.50,"imagen":"img/pyc/bizcocho.png"},
-{"nombre":"torta","cantidad":1,"id":2,"precioPorUnidad":20.00,"imagen":"img/pyc/torta.png"},
-{"nombre":"tostada","cantidad":5,"id":3,"precioPorUnidad":0.30,"imagen":"img/pyc/tostadas.png"},
-{"nombre":"magdalenas","cantidad":5,"id":4,"precioPorUnidad":0.40,"imagen":"img/pyc/magdalenas.png"},
+{"nombre":"medialuna","id":0,"precioPorUnidad":4.00,"imagen":"img/pyc/medialuna.png"},
+{"nombre":"bizcochuelo","id":1,"precioPorUnidad":0.50,"imagen":"img/pyc/bizcocho.png"},
+{"nombre":"torta","id":2,"precioPorUnidad":20.00,"imagen":"img/pyc/torta.png"},
+{"nombre":"tostada","id":3,"precioPorUnidad":0.30,"imagen":"img/pyc/tostadas.png"},
+{"nombre":"magdalenas","id":4,"precioPorUnidad":0.40,"imagen":"img/pyc/magdalenas.png"},
 ];
 
 var frutas=[
-{"nombre":"manzana","cantidad":1,"id":0,"precioPorUnidad":3.00,"imagen":"img/fr/manzana.png"},
-{"nombre":"frutilla","cantidad":0,"id":1,"precioPorUnidad":13.00,"imagen":"img/fr/frutillas.png"},
-{"nombre":"naranja","cantidad":0,"id":2,"precioPorUnidad":2.00,"imagen":"img/fr/naranja.png"},
+{"nombre":"manzana","id":0,"precioPorUnidad":3.00,"imagen":"img/fr/manzana.png"},
+{"nombre":"frutilla","id":1,"precioPorUnidad":13.00,"imagen":"img/fr/frutillas.png"},
+{"nombre":"naranja","id":2,"precioPorUnidad":2.00,"imagen":"img/fr/naranja.png"},
 ];
 
 var dulces=[
-{"nombre":"manteca","cantidad":1,"id":0,"precioPorUnidad":2.00,"imagen":"img/dlc/manteca.png"},
-{"nombre":"dulce de leche","cantidad":1,"id":1,"precioPorUnidad":3.50,"imagen":"img/dlc/ddll.png"},
-{"nombre":"miel","cantidad":1,"id":2,"precioPorUnidad":4.00,"imagen":"img/dlc/miel.png"},
-{"nombre":"mermelada de frutilla","cantidad":1,"id":3,"precioPorUnidad":3.75,"imagen":"img/dlc/mermFrutilla.png"},
+{"nombre":"manteca","id":0,"precioPorUnidad":2.00,"imagen":"img/dlc/manteca.png"},
+{"nombre":"dulce de leche","id":1,"precioPorUnidad":3.50,"imagen":"img/dlc/ddll.png"},
+{"nombre":"miel","id":2,"precioPorUnidad":4.00,"imagen":"img/dlc/miel.png"},
+{"nombre":"mermelada de frutilla","id":3,"precioPorUnidad":3.75,"imagen":"img/dlc/mermFrutilla.png"},
 ];
 
 var taza=[

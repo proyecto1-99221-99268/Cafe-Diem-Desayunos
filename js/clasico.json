@@ -1,22 +1,22 @@
 var clasicobebida=[
-	{"nombre":"leche","cantidad":0,"id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png"},
-	{"nombre":"cafe","cantidad":0,"id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe.png"},
-	{"nombre":"te","cantidad":0,"id":2,"precioPorUnidad":8.00,"imagen":"img/bebida/te.png"},
+	{"nombre":"leche","id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png"},
+	{"nombre":"cafe","id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe.png"},
+	{"nombre":"te","id":2,"precioPorUnidad":8.00,"imagen":"img/bebida/te.png"},
 	];
 
 var clasicopyc=[
-	{"nombre":"medialuna","cantidad":4,"id":0,"precioPorUnidad":4.00,"imagen":"img/pyc/medialuna.png"},
-	{"nombre":"bizcochuelo","cantidad":6,"id":1,"precioPorUnidad":0.50,"imagen":"img/pyc/bizcocho.png"},
-	{"nombre":"magdalenas","cantidad":5,"id":4,"precioPorUnidad":0.40,"imagen":"img/pyc/magdalenas.png"},
+	{"nombre":"medialuna","id":0,"precioPorUnidad":4.00,"imagen":"img/pyc/medialuna.png"},
+	{"nombre":"bizcochuelo","id":1,"precioPorUnidad":0.50,"imagen":"img/pyc/bizcocho.png"},
+	{"nombre":"magdalenas","id":4,"precioPorUnidad":0.40,"imagen":"img/pyc/magdalenas.png"},
 ];
 
 var clasicofruta=[
-	{"nombre":"manzana","cantidad":1,"id":0,"precioPorUnidad":3.00,"imagen":"img/fr/manzana.png"},
+	{"nombre":"manzana","id":0,"precioPorUnidad":3.00,"imagen":"img/fr/manzana.png"},
 ];
 
 var clasicodulce=[
-	{"nombre":"manteca","cantidad":1,"id":0,"precioPorUnidad":2.00,"imagen":"img/dlc/manteca.png"},
-	{"nombre":"dulce de leche","cantidad":1,"id":1,"precioPorUnidad":3.50,"imagen":"img/dlc/ddll.png"},
+	{"nombre":"manteca","id":0,"precioPorUnidad":2.00,"imagen":"img/dlc/manteca.png"},
+	{"nombre":"dulce de leche","id":1,"precioPorUnidad":3.50,"imagen":"img/dlc/ddll.png"},
 ];
 
 var clasicotaza=[
@@ -26,3 +26,10 @@ var clasicotaza=[
 var clasicobandeja=[
 	{"id":1,"nombre":"tabla de madera","precioPorUnidad":20.00,"imagen":"img/bandeja/tabla madera.png"},
 ];
+
+clasico[0]=clasicobebida;
+clasico[1]=clasicofruta;
+clasico[2]=clasicodulce;
+clasico[3]=clasicopyc;
+clasico[4]=clasicotaza;
+clasico[5]=clasicobandeja;
