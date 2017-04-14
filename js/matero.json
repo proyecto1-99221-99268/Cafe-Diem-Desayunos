@@ -1,34 +1,35 @@
 var materobebida=[
-	{"nombre":"leche","id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png"},
-	{"nombre":"cafe","id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe2.png"},
-	{"nombre":"mate","id":5,"precioPorUnidad":20.00,"imagen":"img/bebida/mate.png"},
+	{"categoria":"BE", "nombre":"leche","id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png"},
+	{"categoria":"BE", "nombre":"cafe","id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe2.png"},
+	{"categoria":"BE", "nombre":"mate","id":5,"precioPorUnidad":20.00,"imagen":"img/bebida/mate.png"},
 	];
 
 var materopyc=[
-{"nombre":"medialuna","id":0,"precioPorUnidad":4.00,"imagen":"img/pyc/medialuna.png"},
-{"nombre":"bizcochuelo","id":1,"precioPorUnidad":0.50,"imagen":"img/pyc/bizcocho.png"},
-{"nombre":"tostada","id":3,"precioPorUnidad":0.30,"imagen":"img/pyc/tostadas.png"},
+{"categoria":"P", "nombre":"medialuna","id":0,"precioPorUnidad":4.00,"imagen":"img/pyc/medialuna.png"},
+{"categoria":"P", "nombre":"bizcochuelo","id":1,"precioPorUnidad":0.50,"imagen":"img/pyc/bizcocho.png"},
+{"categoria":"P", "nombre":"tostada","id":3,"precioPorUnidad":0.30,"imagen":"img/pyc/tostadas.png"},
 ];
 
 var materofruta=[
-{"nombre":"naranja","id":2,"precioPorUnidad":2.00,"imagen":"img/fr/naranja.png"},
+{"categoria":"F", "nombre":"naranja","id":2,"precioPorUnidad":2.00,"imagen":"img/fr/naranja.png"},
 ];
 
 var materodulce=[
-{"nombre":"manteca","id":0,"precioPorUnidad":2.00,"imagen":"img/dlc/manteca.png"},
-{"nombre":"dulce de leche","id":1,"precioPorUnidad":3.50,"imagen":"img/dlc/ddll.png"},
-{"nombre":"miel","id":2,"precioPorUnidad":4.00,"imagen":"img/dlc/miel.png"},
-{"nombre":"mermelada de frutilla","id":3,"precioPorUnidad":3.75,"imagen":"img/dlc/mermFrutilla.png"},
+{"categoria":"D", "nombre":"manteca","id":0,"precioPorUnidad":2.00,"imagen":"img/dlc/manteca.png"},
+{"categoria":"D", "nombre":"dulce de leche","id":1,"precioPorUnidad":3.50,"imagen":"img/dlc/ddll.png"},
+{"categoria":"D", "nombre":"miel","id":2,"precioPorUnidad":4.00,"imagen":"img/dlc/miel.png"},
+{"categoria":"D", "nombre":"mermelada de frutilla","id":3,"precioPorUnidad":3.75,"imagen":"img/dlc/mermFrutilla.png"},
 ];
 
 var materotaza=[
-{"nombre":"taza verde", "id":3,"precioPorUnidad":12.00, "imagen":"img/tazas/taza verde.png"},
+{"categoria":"T", "nombre":"taza verde", "id":3,"precioPorUnidad":12.00, "imagen":"img/tazas/taza verde.png"},
 ];
 
 var materobandeja=[
-{"id":2,"nombre":"canasta de madera","precioPorUnidad":20.00,"imagen":"img/bandeja/canasta madera.png"},
+{"categoria":"BA", "nombre":"canasta de madera","id":2, "precioPorUnidad":20.00,"imagen":"img/bandeja/canasta madera.png"},
 ];
 
+var matero=[];
 matero[0]=materobebida;
 matero[1]=materofruta;
 matero[2]=materodulce;

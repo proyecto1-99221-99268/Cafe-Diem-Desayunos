@@ -4,8 +4,13 @@ var desayunos   = [];
 var capas = [];
 var opcionesTotales=[];
 var escenario;
-var desayunoElegido=[]; //para clasico, especial y matero
-var opcionesElegido=[];
+var opcionesDesayunos=[];
+//var desayunoElegido=[]; //para clasico, especial y matero
+//var opcionesElegido=[];
+
+var todoslosdesayunos=[];
+var predefinidos=[];
+
 
 function KineticCanvas(n){
 	 	escenario = new Kinetic.Stage({
@@ -18,7 +23,6 @@ function KineticCanvas(n){
 	
 
 function cargar(){
-
 	opcionesTotales[0]=opcionesBebidas;
 	opcionesTotales[1]=frutas;
 	opcionesTotales[2]=dulces;
@@ -38,15 +42,57 @@ function cargar(){
 		desayunoPersonalizado[i]=arreglo;
 	}
 
-	desayunos["personalizado"]=desayunoPersonalizado;
+	//desayunos["personalizado"]=desayunoPersonalizado;
+	//desayunos[0]=desayunoPersonalizado;
+	opcionesDesayunos[0]=desayunoPersonalizado;  //????????????????
 //	cargarEspecificos();
+	crearPredefinidos();
+	
 
+}
+
+
+function crearPredefinidos(){
+	predefinidos[0]=clasico;
+	predefinidos[1]=especial;
+	predefinidos[2]=matero;
+	for (var i = 1; i<predefinidos.length; i++) {
+		var predef=predefinidos[i];
+		for(var j=0; j<predef.length; j++){
+			var categoria=predef[j];
+			var elems=new Array();
+			for(var k=0; k<categoria.length; k++){
+				elems[k]=true;
+			}
+		}
+		
+		opcionesDesayunos[i]=predef;
+	}
+}
+
+function mostrarPredefinido(N){
+	//N es la posicion en opcionesDesayunos del desayuno que quiero mostrar
+	var amostrar=opcionesDesayunos[N];
+
+
+
+	/* for (var k = 0; k <opcionesDesayunos.length; k++) {
+	 	var desayun=clone(desayunoPersonalizado);
+	 	var d=opcionesDesayunos[k];
+	 	for(var j=0; j<d.length; j++){
+	 		var categoria=d[j]; 
+	 		var catdes=desayun[j];
+	 		for (var i = 0; i <categoria.length ; i++) {
+	 			catdes[categoria[i].id]=true;
+	 		}
+	 	}
+	 	todoslosdesayunos[k]=desayun;
+	 }*/
 }
 
 
 function mostrar(){
 	cargar();
-
 	var n = document.getElementById("miCanvas").offsetWidth;
   	KineticCanvas(n);
 	var tablas=document.getElementsByTagName("TABLE");
@@ -117,7 +163,7 @@ function pintarCanvas(event){
 
 	}else{
 		//document.getElementById("miCanvas").innerHTML=elemento.imagen;
-		setearDibujo(elemento.imagen,elemento.nombre);
+		setearDibujo(elemento.imagen,elemento.nombre, elemento.x, elemento.y, elemento.w, elemento.h);
 		categoria[id]=true;
 
 		if(idTabla==4 || idTabla==5){
@@ -144,7 +190,7 @@ function actualizarEstado(check,seleccionado){
 
 
 
-function setearDibujo(source,nombre){
+function setearDibujo(source,nombre,equis,ygriega, w, h){
 	var nuevaCapa = new Kinetic.Layer({id:nombre});
 	//capas[nombre]=nuevaCapa;
 	var imagen = new Image();
@@ -152,10 +198,10 @@ function setearDibujo(source,nombre){
  	var imgFondo = new Kinetic.Image({
         image: imagen,
         draggable: true,
-        x: 0,
-        y: 0,
-        width: 75,
-        height: 100
+        x: equis,
+        y: ygriega,
+        width: w,
+        height: h
     });
  	nuevaCapa.add(imgFondo);
     escenario.add(nuevaCapa);
