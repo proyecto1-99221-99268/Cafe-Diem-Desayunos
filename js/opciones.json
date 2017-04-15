@@ -34,14 +34,14 @@ var taza=[
 {"categoria":"T", "nombre":"taza azul", "id":2,"precioPorUnidad":12.00, "imagen":"img/tazas/taza azul.png","x":250, "y":110, "w":100, "h":100},
 {"categoria":"T", "nombre":"taza verde", "id":3,"precioPorUnidad":12.00, "imagen":"img/tazas/taza verde.png","x":250, "y":110, "w":100, "h":100},
 {"categoria":"T", "nombre":"taza blanza con cuchara rosa", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara rosa.png","x":250, "y":110, "w":100, "h":100},
-{"categoria":"T", "nombre":"taza blanza con cuchara naranja", "id":5,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara naranja.png","x":250, "y":110, "w":100, "h":100},
-{"categoria":"T", "nombre":"taza blanza con cuchara azul", "id":6,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara azul.png","x":250, "y":110, "w":100, "h":100},
+{"categoria":"T", "nombre":"taza blanza con cuchara naranja", "id":5,"precioPorUnidad":10.00, "imagen":"img/tazas/taza blanza con cuchara naranja.png","x":250, "y":110, "w":100, "h":100},
+{"categoria":"T", "nombre":"taza blanza con cuchara azul", "id":6,"precioPorUnidad":14.00, "imagen":"img/tazas/taza blanza con cuchara azul.png","x":250, "y":110, "w":100, "h":100},
 ];
 
 var bandeja=[
 {"categoria":"BA", "nombre":"Bandeja de madera","id":0,"precioPorUnidad":20.00,"imagen":"img/bandeja/bandejaMadera.png","x":100, "y":280, "w":400, "h":300},
-{"categoria":"BA", "nombre":"tabla de madera","id":1,"precioPorUnidad":20.00,"imagen":"img/bandeja/tabla madera.png","x":100, "y":280, "w":400, "h":300},
-{"categoria":"BA", "nombre":"canasta de madera","id":2,"precioPorUnidad":20.00,"imagen":"img/bandeja/canasta madera.png","x":100, "y":280, "w":400, "h":300},
+{"categoria":"BA", "nombre":"tabla de madera","id":1,"precioPorUnidad":21.00,"imagen":"img/bandeja/tabla madera.png","x":100, "y":280, "w":400, "h":300},
+{"categoria":"BA", "nombre":"canasta de madera","id":2,"precioPorUnidad":22.00,"imagen":"img/bandeja/canasta madera.png","x":100, "y":280, "w":400, "h":300},
 ];
 
 

@@ -1,10 +1,12 @@
-var desayunoPersonalizado=[];
+//var desayunoPersonalizado=[];
 var desayunos   = [];
-// =new Object();
+var seleccionado = "b0";
+// =new Object();""
 var capas = [];
 var opcionesTotales=[];
 var escenario;
 var opcionesDesayunos=[];
+
 //var desayunoElegido=[]; //para clasico, especial y matero
 //var opcionesElegido=[];
 
@@ -29,23 +31,28 @@ function cargar(){
 	opcionesTotales[3]=panaderiaconfiteria;
 	opcionesTotales[4]=taza;
 	opcionesTotales[5]=bandeja;
-	for (var i = 0; i < opcionesTotales.length; i++) {
-		var opcion = opcionesTotales[i];	
-		var arreglo=new Array();
-		//desayunoPersonalizado.arreglo=bebidas;
-		for (var j=0;j<opcion.length;j++){
-			//var elemento=new Object();
-			//elemento.id=opcion[j].id; //voy construyendo los elems para la lista de selección
-			//elemento.seleccionado=false;
-			arreglo[j]=false;
+	var desayunoPersonalizado=[];	
+	var text = localStorage.getItem("personalizado");
+	if (text==null){
+			for (var i = 0; i < opcionesTotales.length; i++) {
+				var opcion = opcionesTotales[i];	
+				var arreglo=new Array();
+				for (var j=0;j<opcion.length;j++){
+					arreglo[j]=false;
+				}
+				desayunoPersonalizado[i]=arreglo;
+			}
+			opcionesDesayunos["b0"]=desayunoPersonalizado;
+		//opcionesDesayunos["b0"]=desayunoPersonalizado;  //????????????????
 		}
-		desayunoPersonalizado[i]=arreglo;
-	}
+	
+	else
+	{
+		var obj = JSON.parse(text);
+		opcionesDesayunos["b0"]=obj;
+		
 
-	//desayunos["personalizado"]=desayunoPersonalizado;
-	//desayunos[0]=desayunoPersonalizado;
-	opcionesDesayunos[0]=desayunoPersonalizado;  //????????????????
-//	cargarEspecificos();
+	}
 	crearPredefinidos();
 	
 
@@ -56,29 +63,9 @@ function crearPredefinidos(){
 	predefinidos[0]=clasico;
 	predefinidos[1]=especial;
 	predefinidos[2]=matero;
-	for (var i = 1; i<predefinidos.length; i++) {
-		var predef=predefinidos[i];
-		for(var j=0; j<predef.length; j++){
-			var categoria=predef[j];
-			var elems=new Array();
-			for(var k=0; k<categoria.length; k++){
-				elems[k]=true;
-			}
-		}
-		
-		opcionesDesayunos[i]=predef;
-	}
-}
-
-function mostrarPredefinido(N){
-	//N es la posicion en opcionesDesayunos del desayuno que quiero mostrar
-	var amostrar=opcionesDesayunos[N];
-
-
-
-	/* for (var k = 0; k <opcionesDesayunos.length; k++) {
-	 	var desayun=clone(desayunoPersonalizado);
-	 	var d=opcionesDesayunos[k];
+	for (var k = 0; k <predefinidos.length; k++) {
+	 	var desayun=crearDesayunoVacio();
+	 	var d=predefinidos[k];
 	 	for(var j=0; j<d.length; j++){
 	 		var categoria=d[j]; 
 	 		var catdes=desayun[j];
@@ -86,15 +73,63 @@ function mostrarPredefinido(N){
 	 			catdes[categoria[i].id]=true;
 	 		}
 	 	}
-	 	todoslosdesayunos[k]=desayun;
-	 }*/
+	 	opcionesDesayunos["b"+(k+1)]=desayun;
+	 }
+		
+
 }
 
 
+function mostrarPredefinido(N){
+	//N es la posicion en opcionesDesayunos del desayuno que quiero mostrar
+	eliminarDibujos();
+	limpiarInputs();
+	var amostrar=opcionesDesayunos[N];
+ 	for(var j=0; j<amostrar.length; j++){
+ 		var categoria=amostrar[j]; 
+		var cat = opcionesTotales[j];
+ 		for (var i = 0; i <categoria.length ; i++) {
+ 			if (categoria[i]==true){
+ 				var elemento = cat[i];
+				setearDibujo(elemento.imagen,elemento.nombre,elemento.x,elemento.y, elemento.w, elemento.h);
+				setearCeldas(j,elemento.id);
+ 			}
+ 		}
+ 	}
+	calcularPrecio();	
+
+
+}
+function configurarTipoDesayuno(event){
+	var target=event.target;
+	console.log(target.id);
+	$(".DP").removeClass("active");
+	seleccionado = target.id;
+	mostrarPredefinido(target.id);
+	$("#"+target.id).addClass("active");
+
+
+}
+function setearCeldas(idTabla,idElem){
+	var todasLasTablas = $(".table");
+	tabla=todasLasTablas[idTabla]; 
+	var Nrofila=Math.floor(idElem/3);
+	var fila = tabla.childNodes[Nrofila+1];
+	var input = fila.childNodes[idElem%3].childNodes[1];
+	//input.click();
+	actualizarEstado(input,true);
+}
+function limpiarInputs(){
+	$("input").prop('checked', false);
+}
+
+
+
 function mostrar(){
-	cargar();
 	var n = document.getElementById("miCanvas").offsetWidth;
+	cargar();
   	KineticCanvas(n);
+	$(".DP").click(configurarTipoDesayuno);
 	var tablas=document.getElementsByTagName("TABLE");
 	for (var l=0;l<tablas.length;l++){
 		var tablaCategoria=tablas[l];
@@ -122,7 +157,12 @@ function mostrar(){
 						input.setAttribute("type", "checkbox");
 					}else{
 						input.setAttribute("type", "radio");
-						input.setAttribute("name", opciones.nombre);
+						var nombreC;
+						if(opcionesTotales[l]==taza)
+							nombreC="taza";
+						else
+							nombreC="bandeja";
+						input.setAttribute("name", nombreC);
 					}
 					celda.appendChild(imagen);
 					celda.appendChild(input);
@@ -133,11 +173,25 @@ function mostrar(){
 			tablaCategoria.appendChild(fila);
 		}
 	}
+	var text = localStorage.getItem("personalizado");
+	if (text!=null){
+		mostrarPredefinido("b0");
+	}
 }
 
 
  
 function pintarCanvas(event){
+	
+	opcionesDesayunos["b0"]=crearDesayuno(seleccionado);
+	
+	// localStorage.removeItem("personalizado");
+	// var myJSON = JSON.stringify(desayunoPersonalizado);
+	// localStorage.setItem("personalizado",myJSON);
+	seleccionado="b0";
+	$(".DP").removeClass("active");
+	$("#"+seleccionado).addClass("active");
+
 	var target=event.target;
 	while(target.tagName!="TD"){
 		target=target.parentNode;
@@ -155,6 +209,7 @@ function pintarCanvas(event){
 	}
 	var tablaElegida=opcionesTotales[idTabla];
 	var elemento=tablaElegida[id];
+	var desayunoPersonalizado=opcionesDesayunos["b0"];
 	var categoria=desayunoPersonalizado[idTabla];
 	if(categoria[id]==true){
 		//document.getElementById("miCanvas").innerHTML="elemento.imagen";
@@ -176,7 +231,7 @@ function pintarCanvas(event){
 		}
 	}
 	actualizarEstado(check,categoria[id]);
-
+	calcularPrecio();
 }
 
 
@@ -185,7 +240,7 @@ function actualizarEstado(check,seleccionado){
 		check.checked=false;
 	else
 		check.checked=true;
-	calcularPrecio();
+	
 }
 
 
@@ -227,10 +282,15 @@ function quitarDibujo(nombre){
 }
 
 
+function eliminarDibujos(){
+	if (escenario.getChildren().length != 0)
+		escenario.removeChildren();
+}
 function calcularPrecio(){
 	var precio = 0;
-	for (var i=0 ; i<desayunoPersonalizado.length;i++){
-		var op = desayunoPersonalizado[i];
+	var des = opcionesDesayunos[seleccionado];
+	for (var i=0 ; i<des.length;i++){
+		var op = des[i];
 		for (var j = 0; j <op.length; j++) {
 			if (op[j]){
 				var categoria= opcionesTotales[i];
@@ -242,6 +302,30 @@ function calcularPrecio(){
 }
 
 
-function cargarEspecifico(){
+function crearDesayunoVacio() {
+    var Des = [];
+    for (var i = 0; i < opcionesTotales.length; i++) {
+		var opcion = opcionesTotales[i];	
+		var arreglo=new Array();
+		for (var j=0;j<opcion.length;j++){
+			arreglo[j]=false;
+		}
+		Des[i]=arreglo;
+	}
+	return Des;
+
+}
+function crearDesayuno(bn) {
+    var Des = [];
+    var opDesa=opcionesDesayunos[bn];
+    for (var i = 0; i < opDesa.length; i++) {
+		var opcion = opDesa[i];	
+		var arreglo=new Array();
+		for (var j=0;j<opcion.length;j++){
+			arreglo[j]=opcion[j] ;
+		}
+		Des[i]=arreglo;
+	}
+	return Des;
 
 }

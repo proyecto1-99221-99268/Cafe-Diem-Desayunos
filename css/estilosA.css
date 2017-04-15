@@ -32,3 +32,8 @@ footer{
 	width:8em ;
 	height: 8em;
 }
+
+
+.noMargin{
+	margin: 0px;
+}
