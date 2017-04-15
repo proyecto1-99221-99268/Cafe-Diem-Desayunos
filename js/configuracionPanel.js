@@ -129,6 +129,7 @@ function mostrar(){
 	var n = document.getElementById("miCanvas").offsetWidth;
 	cargar();
   	KineticCanvas(n);
+	$("#borrar").click(borrarCanvas);
 	$(".DP").click(configurarTipoDesayuno);
 	var tablas=document.getElementsByTagName("TABLE");
 	for (var l=0;l<tablas.length;l++){
@@ -280,7 +281,16 @@ function quitarDibujo(nombre){
 	escenario.draw();
 
 }
+function borrarCanvas(){
+	eliminarDibujos();
+	seleccionado="b0";
+	opcionesDesayunos[seleccionado]=crearDesayunoVacio();
+	$("#precio").text("$0.00");
+	limpiarInputs();
+	$(".DP").removeClass("active");
+	$("#"+seleccionado).addClass("active");
 
+}
 
 function eliminarDibujos(){
 	if (escenario.getChildren().length != 0)
