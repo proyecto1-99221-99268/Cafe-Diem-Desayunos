@@ -103,7 +103,7 @@ function mostrarPredefinido(N,setearceldas){
  		for (var i = 0; i <categoria.length ; i++) {
  			if (categoria[i]==true){
  				var elemento = cat[i];
-				setearDibujo(elemento.imagen,elemento.nombre,elemento.x,elemento.y, elemento.w, elemento.h);
+				setearDibujo(elemento.imagen,elemento.nombre,elemento.x,elemento.y, elemento.w, elemento.h,j==5);
 				if (setearceldas) 
 					setearCeldas(j,elemento.id);
  			}
@@ -140,6 +140,9 @@ function limpiarInputs(){
 
 function mostrar(){
 	$("#comprar").click(comprar);
+	$("#guardar").click(guardar);
+	$("#cargar").click(recuperar);
+
 	var n = document.getElementById("miCanvas").offsetWidth;
 	cargar();
   	KineticCanvas(n);
@@ -233,7 +236,7 @@ function pintarCanvas(event){
 
 	}else{
 		//document.getElementById("miCanvas").innerHTML=elemento.imagen;
-		setearDibujo(elemento.imagen,elemento.nombre, elemento.x, elemento.y, elemento.w, elemento.h);
+		setearDibujo(elemento.imagen,elemento.nombre, elemento.x, elemento.y, elemento.w, elemento.h,idTabla==5);
 		categoria[id]=true;
 
 		if(idTabla==4 || idTabla==5){
@@ -260,7 +263,7 @@ function actualizarEstado(check,seleccionado){
 
 
 
-function setearDibujo(source,nombre,equis,ygriega, w, h){
+function setearDibujo(source,nombre,equis,ygriega, w, h,bandeja){
 	var nuevaCapa = new Kinetic.Layer({id:nombre});
 	//capas[nombre]=nuevaCapa;
 	var imagen = new Image();
@@ -277,6 +280,8 @@ function setearDibujo(source,nombre,equis,ygriega, w, h){
     });
  	nuevaCapa.add(imgFondo);
     escenario.add(nuevaCapa);
+    if (bandeja)
+    	nuevaCapa.moveToBottom() ;
     escenario.draw();
 }
 
@@ -392,6 +397,12 @@ function comprar(){
 		}
 
 	}
+	fila=document.createElement("TR");
+				precioTotal=document.createElement("TD");
+				precioTotal.innerHTML="precio total = $"+precio;
+				fila.appendChild(precioTotal);
+				tabla.appendChild(fila);
+
 
 	dialogo.appendChild(tabla);
 	document.getElementById("cartel").appendChild(dialogo);
@@ -410,4 +421,23 @@ function comprar(){
 //   <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
 // </div>
 
+}
+function guardar(){
+	var myJSON = localStorage.getItem("desayuno");
+	if (myJSON != null)
+	{
+		localStorage.removeItem("desayuno");
+		var desa = JSON.stringify(opcionesDesayunos["b0"]);
+		localStorage.setItem("desayuno",desa);
+	}
+	//console.log(localStorage.getItem("desayuno"));
+}
+function recuperar(){
+	var myJSON = localStorage.getItem("desayuno");
+	if (myJSON != null){
+		 var desayunium = JSON.parse(myJSON);
+		console.log(JSON.stringify(desayunium));	
+		opcionesDesayunos["b0"]=desayunium;
+		prepararCanvas("b0");
+	}
 }

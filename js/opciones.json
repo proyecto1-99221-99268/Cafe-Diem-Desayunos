@@ -1,41 +1,41 @@
 var opcionesBebidas=[
 	{"categoria":"BE", "nombre":"leche","id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png", "x":0.1, "y":0.5, "w":0.17, "h":0.17},
 	{"categoria":"BE", "nombre":"cafe","id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe2.png","x":0.1, "y":0.7, "w":0.15, "h":0.15 },
-	{"categoria":"BE", "nombre":"te","id":2,"precioPorUnidad":8.00,"imagen":"img/bebida/te.png","x":0.3, "y":0.5, "w":0.20, "h":0.20 },
-	{"categoria":"BE", "nombre":"jugo","id":3,"precioPorUnidad":6.00,"imagen":"img/bebida/jugo.png","x":150, "y":130, "w":100, "h":100 },
-	{"categoria":"BE", "nombre":"yogur","id":4,"precioPorUnidad":9.00,"imagen":"img/bebida/yogur.png","x":90, "y":130, "w":80, "h":80 },
-	{"categoria":"BE", "nombre":"mate","id":5,"precioPorUnidad":20.00,"imagen":"img/bebida/mate.png","x":200, "y":230, "w":100, "h":100 },
+	{"categoria":"BE", "nombre":"te","id":2,"precioPorUnidad":8.00,"imagen":"img/bebida/te.png","x":0.25, "y":0.5, "w":0.20, "h":0.20 },
+	{"categoria":"BE", "nombre":"jugo","id":3,"precioPorUnidad":6.00,"imagen":"img/bebida/jugo.png","x":0.25, "y":0.7, "w":0.20, "h":0.20 },
+	{"categoria":"BE", "nombre":"yogur","id":4,"precioPorUnidad":9.00,"imagen":"img/bebida/yogur.png","x":0.4, "y":0.7, "w":0.15, "h":0.15  },
+	{"categoria":"BE", "nombre":"mate","id":5,"precioPorUnidad":20.00,"imagen":"img/bebida/mate.png","x":0.4, "y":0.5, "w":0.20, "h":0.20  },
 	];
 
 var panaderiaconfiteria=[
-{"categoria":"P", "nombre":"medialuna","id":0,"precioPorUnidad":4.00,"imagen":"img/pyc/medialuna.png","x":320, "y":180, "w":80, "h":80},
-{"categoria":"P", "nombre":"bizcochuelo","id":1,"precioPorUnidad":0.50,"imagen":"img/pyc/bizcocho.png","x":480, "y":250, "w":90, "h":90},
-{"categoria":"P", "nombre":"torta","id":2,"precioPorUnidad":20.00,"imagen":"img/pyc/torta.png","x":370, "y":80, "w":120, "h":120},
-{"categoria":"P", "nombre":"tostada","id":3,"precioPorUnidad":0.30,"imagen":"img/pyc/tostadas.png","x":500, "y":110, "w":80, "h":80},
-{"categoria":"P", "nombre":"magdalenas","id":4,"precioPorUnidad":0.40,"imagen":"img/pyc/magdalenas.png","x":420, "y":160, "w":100, "h":100},
+{"categoria":"P", "nombre":"medialuna","id":0,"precioPorUnidad":4.00,"imagen":"img/pyc/medialuna.png","x":0.7, "y":0.5, "w":0.15, "h":0.15 },
+{"categoria":"P", "nombre":"bizcochuelo","id":1,"precioPorUnidad":0.50,"imagen":"img/pyc/bizcocho.png","x":0.65, "y":0.65, "w":0.13, "h":0.13},
+{"categoria":"P", "nombre":"torta","id":2,"precioPorUnidad":20.00,"imagen":"img/pyc/torta.png","x":0.9, "y":0.6, "w":0.20, "h":0.20},
+{"categoria":"P", "nombre":"tostada","id":3,"precioPorUnidad":0.30,"imagen":"img/pyc/tostadas.png","x":0.8, "y":0.5, "w":0.15, "h":0.15},
+{"categoria":"P", "nombre":"magdalenas","id":4,"precioPorUnidad":0.40,"imagen":"img/pyc/magdalenas.png","x":0.85, "y":0.75, "w":0.17, "h":0.15},
 ];
 
 var frutas=[
-{"categoria":"F", "nombre":"manzana","id":0,"precioPorUnidad":3.00,"imagen":"img/fr/manzana.png","x":450, "y":30, "w":90, "h":90},
-{"categoria":"F", "nombre":"frutilla","id":1,"precioPorUnidad":13.00,"imagen":"img/fr/frutillas.png","x":370, "y":230, "w":80, "h":70},
-{"categoria":"F", "nombre":"naranja","id":2,"precioPorUnidad":2.00,"imagen":"img/fr/naranja.png","x":350, "y":30, "w":70, "h":70},
+{"categoria":"F", "nombre":"manzana","id":0,"precioPorUnidad":3.00,"imagen":"img/fr/manzana.png","x":0.6, "y":0.5, "w":0.15, "h":0.15 },
+{"categoria":"F", "nombre":"frutilla","id":1,"precioPorUnidad":13.00,"imagen":"img/fr/frutillas.png","x":0.6, "y":0.5, "w":0.17, "h":0.15 },
+{"categoria":"F", "nombre":"naranja","id":2,"precioPorUnidad":2.00,"imagen":"img/fr/naranja.png","x":0.6, "y":0.5, "w":0.12, "h":0.12 },
 ];
 
 var dulces=[
-{"categoria":"D", "nombre":"manteca","id":0,"precioPorUnidad":2.00,"imagen":"img/dlc/manteca.png","x":480, "y":330, "w":100, "h":80},
-{"categoria":"D", "nombre":"dulce de leche","id":1,"precioPorUnidad":3.50,"imagen":"img/dlc/ddll.png","x":400, "y":310, "w":100, "h":100},
-{"categoria":"D", "nombre":"miel","id":2,"precioPorUnidad":4.00,"imagen":"img/dlc/miel.png","x":150, "y":310, "w":100, "h":100},
-{"categoria":"D", "nombre":"mermelada de frutilla","id":3,"precioPorUnidad":3.75,"imagen":"img/dlc/mermFrutilla.png","x":50, "y":310, "w":100, "h":100},
+{"categoria":"D", "nombre":"manteca","id":0,"precioPorUnidad":2.00,"imagen":"img/dlc/manteca.png","x":0.6, "y":0.5, "w":0.2, "h":0.15 },
+{"categoria":"D", "nombre":"dulce de leche","id":1,"precioPorUnidad":3.50,"imagen":"img/dlc/ddll.png","x":0.6, "y":0.5, "w":0.15, "h":0.15 },
+{"categoria":"D", "nombre":"miel","id":2,"precioPorUnidad":4.00,"imagen":"img/dlc/miel.png","x":0.6, "y":0.5, "w":0.15, "h":0.15 },
+{"categoria":"D", "nombre":"mermelada de frutilla","id":3,"precioPorUnidad":3.75,"imagen":"img/dlc/mermFrutilla.png","x":0.6, "y":0.5, "w":0.15, "h":0.15 },
 ];
 
 var taza=[
-{"categoria":"T", "nombre":"taza naranja", "id":0,"precioPorUnidad":11.00, "imagen":"img/tazas/tazaNaranja.png","x":250, "y":110, "w":100, "h":100},
-{"categoria":"T", "nombre":"taza roja", "id":1,"precioPorUnidad":11.50, "imagen":"img/tazas/taza roja.png","x":250, "y":110, "w":100, "h":100},
-{"categoria":"T", "nombre":"taza azul", "id":2,"precioPorUnidad":12.00, "imagen":"img/tazas/taza azul.png","x":250, "y":110, "w":100, "h":100},
-{"categoria":"T", "nombre":"taza verde", "id":3,"precioPorUnidad":12.00, "imagen":"img/tazas/taza verde.png","x":250, "y":110, "w":100, "h":100},
-{"categoria":"T", "nombre":"taza blanca con cuchara rosa", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara rosa.png","x":250, "y":110, "w":100, "h":100},
-{"categoria":"T", "nombre":"taza blanca con cuchara naranja", "id":5,"precioPorUnidad":10.00, "imagen":"img/tazas/taza blanza con cuchara naranja.png","x":250, "y":110, "w":100, "h":100},
-{"categoria":"T", "nombre":"taza blanca con cuchara azul", "id":6,"precioPorUnidad":14.00, "imagen":"img/tazas/taza blanza con cuchara azul.png","x":250, "y":110, "w":100, "h":100},
+{"categoria":"T", "nombre":"taza naranja", "id":0,"precioPorUnidad":11.00, "imagen":"img/tazas/tazaNaranja.png","x":0.5, "y":0.5, "w":0.17, "h":0.17 },
+{"categoria":"T", "nombre":"taza roja", "id":1,"precioPorUnidad":11.50, "imagen":"img/tazas/taza roja.png","x":0.5, "y":0.5, "w":0.17, "h":0.17 },
+{"categoria":"T", "nombre":"taza azul", "id":2,"precioPorUnidad":12.00, "imagen":"img/tazas/taza azul.png","x":0.5, "y":0.5, "w":0.17, "h":0.17 },
+{"categoria":"T", "nombre":"taza verde", "id":3,"precioPorUnidad":12.00, "imagen":"img/tazas/taza verde.png","x":0.5, "y":0.5, "w":0.17, "h":0.17 },
+{"categoria":"T", "nombre":"taza blanca con cuchara rosa", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara rosa.png","x":0.5, "y":0.5, "w":0.17, "h":0.17 },
+{"categoria":"T", "nombre":"taza blanca con cuchara naranja", "id":5,"precioPorUnidad":10.00, "imagen":"img/tazas/taza blanza con cuchara naranja.png","x":0.5, "y":0.5, "w":0.17, "h":0.17 },
+{"categoria":"T", "nombre":"taza blanca con cuchara azul", "id":6,"precioPorUnidad":14.00, "imagen":"img/tazas/taza blanza con cuchara azul.png","x":0.5, "y":0.5, "w":0.17, "h":0.17 },
 ];
 
 var bandeja=[
