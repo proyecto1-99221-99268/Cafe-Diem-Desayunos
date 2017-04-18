@@ -1,7 +1,7 @@
 var opcionesBebidas=[
-	{"categoria":"BE", "nombre":"leche","id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png", "x":100, "y":230, "w":100, "h":100},
-	{"categoria":"BE", "nombre":"cafe","id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe2.png","x":10, "y":230, "w":100, "h":100 },
-	{"categoria":"BE", "nombre":"te","id":2,"precioPorUnidad":8.00,"imagen":"img/bebida/te.png","x":-10, "y":130, "w":110, "h":110 },
+	{"categoria":"BE", "nombre":"leche","id":0,"precioPorUnidad":5.00,"imagen":"img/bebida/leche.png", "x":0.1, "y":0.5, "w":0.17, "h":0.17},
+	{"categoria":"BE", "nombre":"cafe","id":1,"precioPorUnidad":10.00,"imagen":"img/bebida/cafe2.png","x":0.1, "y":0.7, "w":0.15, "h":0.15 },
+	{"categoria":"BE", "nombre":"te","id":2,"precioPorUnidad":8.00,"imagen":"img/bebida/te.png","x":0.3, "y":0.5, "w":0.20, "h":0.20 },
 	{"categoria":"BE", "nombre":"jugo","id":3,"precioPorUnidad":6.00,"imagen":"img/bebida/jugo.png","x":150, "y":130, "w":100, "h":100 },
 	{"categoria":"BE", "nombre":"yogur","id":4,"precioPorUnidad":9.00,"imagen":"img/bebida/yogur.png","x":90, "y":130, "w":80, "h":80 },
 	{"categoria":"BE", "nombre":"mate","id":5,"precioPorUnidad":20.00,"imagen":"img/bebida/mate.png","x":200, "y":230, "w":100, "h":100 },
@@ -33,15 +33,15 @@ var taza=[
 {"categoria":"T", "nombre":"taza roja", "id":1,"precioPorUnidad":11.50, "imagen":"img/tazas/taza roja.png","x":250, "y":110, "w":100, "h":100},
 {"categoria":"T", "nombre":"taza azul", "id":2,"precioPorUnidad":12.00, "imagen":"img/tazas/taza azul.png","x":250, "y":110, "w":100, "h":100},
 {"categoria":"T", "nombre":"taza verde", "id":3,"precioPorUnidad":12.00, "imagen":"img/tazas/taza verde.png","x":250, "y":110, "w":100, "h":100},
-{"categoria":"T", "nombre":"taza blanza con cuchara rosa", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara rosa.png","x":250, "y":110, "w":100, "h":100},
-{"categoria":"T", "nombre":"taza blanza con cuchara naranja", "id":5,"precioPorUnidad":10.00, "imagen":"img/tazas/taza blanza con cuchara naranja.png","x":250, "y":110, "w":100, "h":100},
-{"categoria":"T", "nombre":"taza blanza con cuchara azul", "id":6,"precioPorUnidad":14.00, "imagen":"img/tazas/taza blanza con cuchara azul.png","x":250, "y":110, "w":100, "h":100},
+{"categoria":"T", "nombre":"taza blanca con cuchara rosa", "id":4,"precioPorUnidad":12.00, "imagen":"img/tazas/taza blanza con cuchara rosa.png","x":250, "y":110, "w":100, "h":100},
+{"categoria":"T", "nombre":"taza blanca con cuchara naranja", "id":5,"precioPorUnidad":10.00, "imagen":"img/tazas/taza blanza con cuchara naranja.png","x":250, "y":110, "w":100, "h":100},
+{"categoria":"T", "nombre":"taza blanca con cuchara azul", "id":6,"precioPorUnidad":14.00, "imagen":"img/tazas/taza blanza con cuchara azul.png","x":250, "y":110, "w":100, "h":100},
 ];
 
 var bandeja=[
-{"categoria":"BA", "nombre":"Bandeja de madera","id":0,"precioPorUnidad":20.00,"imagen":"img/bandeja/bandejaMadera.png","x":100, "y":280, "w":400, "h":300},
-{"categoria":"BA", "nombre":"tabla de madera","id":1,"precioPorUnidad":21.00,"imagen":"img/bandeja/tabla madera.png","x":100, "y":280, "w":400, "h":300},
-{"categoria":"BA", "nombre":"canasta de madera","id":2,"precioPorUnidad":22.00,"imagen":"img/bandeja/canasta madera.png","x":100, "y":280, "w":400, "h":300},
+{"categoria":"BA", "nombre":"Bandeja de madera","id":0,"precioPorUnidad":20.00,"imagen":"img/bandeja/bandejaMadera.png","x":0.5, "y":0.85, "w":0.9, "h":0.35},
+{"categoria":"BA", "nombre":"tabla de madera","id":1,"precioPorUnidad":21.00,"imagen":"img/bandeja/tabla madera.png","x":0.5, "y":0.85, "w":0.9, "h":0.45},
+{"categoria":"BA", "nombre":"canasta de madera","id":2,"precioPorUnidad":22.00,"imagen":"img/bandeja/canasta madera.png","x":0.5, "y":0.90, "w":0.8, "h":0.4},
 ];
 
 

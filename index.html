@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<title>Desayunos El Andrés</title>
@@ -8,9 +8,9 @@
 	<link rel="stylesheet" type="text/css" id="cssArchivo"> 
 	<link rel="icon" href="img/cafe1.png">
 
-<!--   	<link rel="stylesheet" src="css/jquery-ui.css">
- --> 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  	<!-- <script src="js/jquery-ui.js"></script> -->
+	<link rel="stylesheet" src="css/jquery-ui.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  	<script src="js/jquery-ui.js"></script>
   	<script src="js/kinetic-v5.1.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	
@@ -24,7 +24,13 @@
 		$(document).ready(function(){
 			mostrar();
 			cargarCSS();
-		})
+		});
+		$( window ).resize(function() {
+  			resizeCanvas();//console.log( "me cambiaron el tamañooooo" );	
+  		});
+
+
+
 	</script>
 
 </head>
@@ -43,7 +49,7 @@
 			  <button type="button" id="b0" class="btn btn-default active DP">Personalizado</button>
 			</div>
 		</div>
-		<section class="main row">
+		<div class="main row">
 			<div  id="miCanvas" class="noPadding col-xs-12 col-sm-6 col-md-6">
 			</div>
 			<aside class=" col-xs-12 col-sm-6 col-md-6">
@@ -89,18 +95,25 @@
 				  </div>
 				</div>			
 			</aside>
-			<div id="precio" class="col-xs-10 col-sm-10 col-md-10" >
-				$0.00
+		</div>
+		<div class="row">
+			<div  class="col-xs-12 col-sm-6 col-md-6">
+				<div id="precio"  class="col-xs-4 col-sm-4 col-md-4">
+					$0.00
+				</div>
+				<div  class="col-xs-4 col-sm-4 col-md-4">
+					<button id="borrar">Borrar</button>
+				</div>
+				<div  class="col-xs-4 col-sm-4 col-md-4">
+					<button id="comprar">Comprar</button>
+				</div>
 			</div>
-			<div id="cambiarCSSDIV" class="col-xs-1 col-sm-1 col-md-1">
-				<button id="borrar">Borrar</button>
+			<div id="cambiarCSSDIV" class="col-xs-12 col-sm-6 col-md-6">
+				<button id="cambiarCSS" class="pull-right">¡Cambiar apariencia!</button>
 			</div>
-			<div id="cambiarCSSDIV" class="col-xs-1 col-sm-1 col-md-1">
-				<button id="cambiarCSS">¡Cambiar apariencia!</button>
-			</div>
-
-		</section>
-
+		</div>
+		<div id="cartel"></div> 	
+		
 		<footer>
 			<div class="container">
 				le futer

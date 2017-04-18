@@ -48,3 +48,9 @@ padding: 0px 0px 0px 0px;
 .noMargin{
 	margin: 0px 0px 0px 0px;
 }
+
+.cartel{
+	width: 20px;
+	height: 20px;
+	background-color: #dddddd;
+}

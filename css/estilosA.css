@@ -37,3 +37,9 @@ footer{
 .noMargin{
 	margin: 0px;
 }
+
+.cartel{
+	width: 20px;
+	height: 20px;
+	background-color: #dddddd;
+}

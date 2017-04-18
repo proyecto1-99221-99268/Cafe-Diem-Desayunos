@@ -6,19 +6,28 @@ var capas = [];
 var opcionesTotales=[];
 var escenario;
 var opcionesDesayunos=[];
-
+var precio;
 //var desayunoElegido=[]; //para clasico, especial y matero
 //var opcionesElegido=[];
 
 var todoslosdesayunos=[];
 var predefinidos=[];
 
+function resizeCanvas(){
+	eliminarDibujos();
+	var n = document.getElementById("miCanvas").offsetWidth;	
+	escenario.setWidth(n); 		
+	escenario.setHeight(n);
+	mostrarPredefinido(seleccionado,false);	
+
+}
+
 
 function KineticCanvas(n){
 	 	escenario = new Kinetic.Stage({
         container: 'miCanvas',
   		width: n,
-        height: 500,
+        height: n,
 
     });
 }
@@ -78,12 +87,15 @@ function crearPredefinidos(){
 		
 
 }
-
-
-function mostrarPredefinido(N){
-	//N es la posicion en opcionesDesayunos del desayuno que quiero mostrar
+function prepararCanvas(N){
 	eliminarDibujos();
 	limpiarInputs();
+	mostrarPredefinido(N,true);
+	calcularPrecio();
+} 
+
+function mostrarPredefinido(N,setearceldas){
+	//N es la posicion en opcionesDesayunos del desayuno que quiero mostrar
 	var amostrar=opcionesDesayunos[N];
  	for(var j=0; j<amostrar.length; j++){
  		var categoria=amostrar[j]; 
@@ -92,11 +104,12 @@ function mostrarPredefinido(N){
  			if (categoria[i]==true){
  				var elemento = cat[i];
 				setearDibujo(elemento.imagen,elemento.nombre,elemento.x,elemento.y, elemento.w, elemento.h);
-				setearCeldas(j,elemento.id);
+				if (setearceldas) 
+					setearCeldas(j,elemento.id);
  			}
  		}
  	}
-	calcularPrecio();	
+		
 
 
 }
@@ -105,7 +118,7 @@ function configurarTipoDesayuno(event){
 	console.log(target.id);
 	$(".DP").removeClass("active");
 	seleccionado = target.id;
-	mostrarPredefinido(target.id);
+	prepararCanvas(target.id);
 	$("#"+target.id).addClass("active");
 
 
@@ -126,6 +139,7 @@ function limpiarInputs(){
 
 
 function mostrar(){
+	$("#comprar").click(comprar);
 	var n = document.getElementById("miCanvas").offsetWidth;
 	cargar();
   	KineticCanvas(n);
@@ -176,7 +190,7 @@ function mostrar(){
 	}
 	var text = localStorage.getItem("personalizado");
 	if (text!=null){
-		mostrarPredefinido("b0");
+		prepararCanvas("b0");
 	}
 }
 
@@ -250,14 +264,16 @@ function setearDibujo(source,nombre,equis,ygriega, w, h){
 	var nuevaCapa = new Kinetic.Layer({id:nombre});
 	//capas[nombre]=nuevaCapa;
 	var imagen = new Image();
+	var wcanvas=document.getElementById("miCanvas").offsetWidth;
+	var hcanvas=document.getElementById("miCanvas").offsetHeight;
     imagen.src = source;
  	var imgFondo = new Kinetic.Image({
         image: imagen,
         draggable: true,
-        x: equis,
-        y: ygriega,
-        width: w,
-        height: h
+        width: w*wcanvas,
+        x: equis*wcanvas-(w*wcanvas)/2, 
+        y: ygriega*hcanvas-(h*hcanvas)/2,
+        height: h*hcanvas
     });
  	nuevaCapa.add(imgFondo);
     escenario.add(nuevaCapa);
@@ -297,7 +313,7 @@ function eliminarDibujos(){
 		escenario.removeChildren();
 }
 function calcularPrecio(){
-	var precio = 0;
+	precio = 0;
 	var des = opcionesDesayunos[seleccionado];
 	for (var i=0 ; i<des.length;i++){
 		var op = des[i];
@@ -337,5 +353,61 @@ function crearDesayuno(bn) {
 		Des[i]=arreglo;
 	}
 	return Des;
+
+}
+function comprar(){
+	var  midesayuno, i, j, micateg, catOpTo, nombre, preciop;
+	var dialogo, fila, tabla, cnombre, cprecio;
+
+	dialogo=document.createElement("DIV");
+	dialogo.setAttribute("class", "cartel");
+	dialogo.setAttribute("id", "dialog");
+	dialogo.setAttribute("title", "Tu compra..");
+
+
+
+
+	midesayuno=opcionesDesayunos[seleccionado];
+
+	tabla=document.createElement("TABLE");
+
+
+	for(i=0; i<midesayuno.length; i++){
+		micateg=midesayuno[i];
+		catOpTo=opcionesTotales[i];
+		for(j=0; j<micateg.length; j++){
+			if(micateg[j]){
+				nombre=catOpTo[j].nombre;
+				preciop=catOpTo[j].precioPorUnidad;
+			//	console.log("Nombre: "+nombre+" Precio: "+preciop+"...");
+				fila=document.createElement("TR");
+				cnombre=document.createElement("TD");
+				cprecio=document.createElement("TD");
+				cnombre.innerHTML=nombre;
+				cprecio.innerHTML=preciop;
+				fila.appendChild(cnombre);
+				fila.appendChild(cprecio);
+				tabla.appendChild(fila);
+			}
+		}
+
+	}
+
+	dialogo.appendChild(tabla);
+	document.getElementById("cartel").appendChild(dialogo);
+	
+	$( "#dialog" ).dialog({
+      modal: true,
+      buttons: {
+        Ok: function() {
+          $( this ).dialog( "close" );
+        }
+      }
+
+    });
+	//$( "#dialog" ).dialog();
+// 	<div id="dialog" title="Basic dialog">
+//   <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+// </div>
 
 }
