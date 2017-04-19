@@ -154,6 +154,7 @@ function mostrar(){
 		tablaCategoria.setAttribute("id",l);
 		var fila;
 		var celda;
+		var divPrecio;
 		var k=0;
 		var opciones = opcionesTotales[l];
 		var largo=Math.ceil(opciones.length/3);
@@ -163,6 +164,9 @@ function mostrar(){
 				if(k<opciones.length){
 					var imagen, input;
 					celda=document.createElement("TD");
+					divPrecio=document.createElement("DIV");
+					divPrecio.setAttribute("class","precioPorUnidad");
+					divPrecio.innerHTML="$"+opciones[k].precioPorUnidad.toFixed(2);
 					imagen=document.createElement("IMG");
 					imagen.setAttribute("src", opciones[k].imagen);
 					imagen.setAttribute("class", "imagen");
@@ -184,6 +188,7 @@ function mostrar(){
 					}
 					celda.appendChild(imagen);
 					celda.appendChild(input);
+					celda.appendChild(divPrecio);
 					fila.appendChild(celda);
 					k++;
 				}
@@ -329,7 +334,7 @@ function calcularPrecio(){
 			}
 		}
 	}
-	$("#precio").text("$"+precio);
+	$("#precio").text("$"+precio.toFixed(2));
 }
 
 
@@ -424,12 +429,12 @@ function comprar(){
 }
 function guardar(){
 	var myJSON = localStorage.getItem("desayuno");
-	if (myJSON != null)
-	{
+	//if (myJSON != null)
+	//{
 		localStorage.removeItem("desayuno");
 		var desa = JSON.stringify(opcionesDesayunos["b0"]);
 		localStorage.setItem("desayuno",desa);
-	}
+	//}
 	//console.log(localStorage.getItem("desayuno"));
 }
 function recuperar(){
