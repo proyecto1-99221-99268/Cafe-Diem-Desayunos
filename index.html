@@ -13,6 +13,7 @@
   	<script src="js/jquery-ui.js"></script>
   	<script src="js/kinetic-v5.1.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
+	<script src="js/facebox-bootstrap.js"></script>
 	
 	<script type="text/javascript" src="js/opciones.json"></script>
 	<script type="text/javascript" src="js/clasico.json"></script>
@@ -20,19 +21,10 @@
 	<script type="text/javascript" src="js/matero.json"></script>
 	<script type="text/javascript"  src="js/configuracionPanel.js"></script>
 	<script type="text/javascript"  src="js/cambiarCSS.js"></script>
-	<script>
-		$(document).ready(function(){
-			mostrar();
-			cargarCSS();
-		});
-		$( window ).resize(function() {
-  			resizeCanvas();//console.log( "me cambiaron el tamañooooo" );	
-  		});
-
-	</script>
+	 
 
 </head>
-<body>
+<body onload="iniciar()">
 	<div class="container">
 		<header>
 			<div class="container">

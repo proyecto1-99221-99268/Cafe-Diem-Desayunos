@@ -13,6 +13,18 @@ var precio;
 var todoslosdesayunos=[];
 var predefinidos=[];
 
+
+
+
+function iniciar(){
+	mostrar();
+	cargarCSS();
+	
+	$( window ).resize(function() {
+			resizeCanvas();//console.log( "me cambiaron el tamañooooo" );	
+	});
+}
+
 function resizeCanvas(){
 	eliminarDibujos();
 	var n = document.getElementById("miCanvas").offsetWidth;	
@@ -404,16 +416,16 @@ function comprar(){
 
 	}
 	fila=document.createElement("TR");
-				precioTotal=document.createElement("TD");
-				precioTotal.innerHTML="precio total = $"+precio;
-				fila.appendChild(precioTotal);
-				tabla.appendChild(fila);
+	precioTotal=document.createElement("TD");
+	precioTotal.innerHTML="precio total = $"+precio;
+	fila.appendChild(precioTotal);
+	tabla.appendChild(fila);
 
 
 	dialogo.appendChild(tabla);
 	document.getElementById("cartel").appendChild(dialogo);
 	
-	$( "#dialog" ).dialog({
+/*	$( "#dialog" ).dialog({
       modal: true,
       buttons: {
         Ok: function() {
@@ -421,7 +433,14 @@ function comprar(){
         }
       }
 
-    });
+    });*/
+
+   	jQuery.facebox({div:'#dialog'});
+
+	
+
+  
+
 	//$( "#dialog" ).dialog();
 // 	<div id="dialog" title="Basic dialog">
 //   <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
