@@ -169,9 +169,10 @@ function mostrar(){
 					divPrecio.innerHTML="$"+opciones[k].precioPorUnidad.toFixed(2);
 					imagen=document.createElement("IMG");
 					imagen.setAttribute("src", opciones[k].imagen);
-					imagen.setAttribute("class", "imagen");
+					imagen.setAttribute("class", "imagen img-circle");
 					imagen.setAttribute("alt",opciones[k].nombre);
-					//celda.setAttribute("class","ui-widget-content");
+
+					celda.setAttribute("class","resaltar");
 					celda.setAttribute("onclick", "pintarCanvas(event)");
 					celda.setAttribute("id", opciones[k].id);
 					input=document.createElement("INPUT");

@@ -31,6 +31,7 @@ footer{
 .imagen{
 	width:8em ;
 	height: 8em;
+	background-color: #000;
 }
 
 #miCanvas{
@@ -57,4 +58,9 @@ padding: 0px 0px 0px 0px;
 
 .precioPorUnidad{
 	color : black;
+}
+
+.resaltar:hover {
+   	background-color: #aaaaaa;
+
 }
