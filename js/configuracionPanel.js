@@ -6,7 +6,7 @@ var capas = [];
 var opcionesTotales=[];
 var escenario;
 var opcionesDesayunos=[];
-var precio;
+var precio=0;
 //var desayunoElegido=[]; //para clasico, especial y matero
 //var opcionesElegido=[];
 
@@ -384,7 +384,7 @@ function comprar(){
 
 	dialogo=document.createElement("DIV");
 	dialogo.setAttribute("class", "cartel");
-	dialogo.setAttribute("id", "dialog");
+	dialogo.setAttribute("id", "facebox");
 	dialogo.setAttribute("title", "Tu compra..");
 
 
@@ -423,23 +423,23 @@ function comprar(){
 
 
 	dialogo.appendChild(tabla);
-	document.getElementById("cartel").appendChild(dialogo);
+	document.body.appendChild(dialogo);
+	//document.getElementById("cartel").appendChild(dialogo);
 	
-/*	$( "#dialog" ).dialog({
-      modal: true,
-      buttons: {
-        Ok: function() {
-          $( this ).dialog( "close" );
-        }
-      }
+	// $( "#dialog" ).dialog({
+ //      //smodal: true,
+ //      buttons: {
+ //        Ok: function() {
+ //          $( this ).dialog( "close" );
+ //        }
+ //      }
 
-    });*/
+ //    });
 
-   	jQuery.facebox({div:'#dialog'});
+ 	jQuery.facebox({div:'#facebox'});
+	document.body.removeChild(dialogo);
 
-	
-
-  
+  	
 
 	//$( "#dialog" ).dialog();
 // 	<div id="dialog" title="Basic dialog">

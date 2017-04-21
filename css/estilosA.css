@@ -40,12 +40,22 @@ footer{
 }
 
 .cartel{
+	display:none;
 	width: 20px;
 	height: 20px;
-	background-color: #dddddd;
+	background-color: #F00;
 }
 .precioPorUnidad{
 	color : blue;
 }
 
- 
+
+#facebox .content {
+    background-color: #faa;
+}
+#facebox .modal-header {
+    background-color: #faa;
+}
+#facebox .modal-footer {
+    background-color: #faa;
+}
