@@ -1,13 +1,41 @@
+
+
 header{
-	background:#813a26;
+	/*background:#000055;*/
+	color:#fff;  /*color de la letra*/
+	font-style: arial;
 	
 }
-body{
-	background: #e8c571;
+
+h1{
+	font-family:'Helvetica','Verdana','Monaco',sans-serif;
 }
+
+body{
+
+	background-image: url(../imagenes/cafe3.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	 
+	
+}
+
+#navegacion{
+	background-color:transparent;
+}
+
+
+ 
 .main{
 	background: #f2f2f2;
 }
+
+
+
+#miCanvas{
+	border: 1px solid #000;
+}
+
 .color1{
 	background: #34495e;
 	color: #fff;
@@ -45,10 +73,10 @@ footer{
 	display:none;
 	width: 20px;
 	height: 20px;
-	background-color: #F00;
+	background-color: #00000f;
 }
 .precioPorUnidad{
-	color : blue;
+	color : black;
 }
 
 
@@ -60,4 +88,16 @@ footer{
 }
 #facebox .modal-footer {
     background-color: #faa;
+}
+
+#precio{
+	color: #fff;
+	font-size: 17px;
+	font:bold;
+
+}
+
+.resaltar:hover {
+   	background-color: #aaaaaa;
+
 }
