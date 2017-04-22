@@ -1,12 +1,15 @@
 header{
-	background-image: url("../imagenes/header.jpg");
-	color : black;
+	/*background-image: url("../imagenes/header.jpg");*/
+	color : white;
+	font-family: "Verdana";
 }
 .contenedorH1{
 	position:relative;
 }
-h1{
-	line-height: 90px;
+
+h4{
+	font-family: "Verdana";
+	font-style: oblique;
 }
 #logo{
 	float:left;
@@ -33,8 +36,8 @@ aside{
 	height: 500px;
 }
 footer{
-	background: #16a085;
-	color: #fff;
+	background: black;
+	color: white;
 }
 
 .barra {
@@ -84,4 +87,23 @@ padding: 0px 0px 0px 0px;
 	font-size: 20px;
 	 
 
+}
+h1{
+	text-align: left;
+	
+	line-height: 90px;
+}
+
+@media all and (min-width: 767px) {
+
+    h1 {
+      font-size: 8vw;
+    }
+}
+
+@media all and (max-width: 767px) {
+
+    h1 {
+      font-size: 14vw;
+    }
 }
