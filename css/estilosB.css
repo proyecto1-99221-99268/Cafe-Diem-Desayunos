@@ -178,7 +178,6 @@ h1{
     	font-size: 4.3vw; 
     }
     .dam{
-	text-align: right;
 	display: none;
 	}	
     #logoDIV{
@@ -187,6 +186,7 @@ h1{
     }
     h1 {
       font-size: 14vw;
+      text-align: center;
     }
 }
 #borrar{
