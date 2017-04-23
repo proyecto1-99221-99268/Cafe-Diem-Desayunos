@@ -347,7 +347,7 @@ function calcularPrecio(){
 			}
 		}
 	}
-	$("#precio").text("$"+precio.toFixed(2));
+	$("#precio").text("Total $"+precio.toFixed(2));
 }
 
 

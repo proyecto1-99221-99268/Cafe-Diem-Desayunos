@@ -18,6 +18,7 @@ h4{
 
 body{
 	background-image: url("../imagenes/fondo.jpg");
+	background-attachment: fixed;
 }
 .main{
 	background: #eddbc3;
@@ -41,10 +42,31 @@ footer{
 }
 
 .barra {
-	background: #ce7825;
+	background: #8B4513;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
+.barraContenedora{
+	background-color: transparent;
+}
+.botonesBarra{
+	background: #FFDEAD;
+	color: #AF3333;
+	font-family: verdana;
+	font-size: 20px; 
+}
+.botonesBarra:hover{
+	background: #D2691E;
+	color: #320000;
+	font-family: verdana;
+	font-size: 20px; 
+}
+/*.botonesBarra:active{
+	background: #A0522D;
+	color: #FFFFF0;
 
-
+}
+*/
 .imagen{
 	width:8em ;
 	height: 8em;
@@ -106,4 +128,33 @@ h1{
     h1 {
       font-size: 14vw;
     }
+}
+#borrar{
+	background-image: url("../imagenes/botones/borrar.png");
+}
+#guardar{
+	background-image: url("../imagenes/botones/guardar.png");
+}
+#cargar{
+	background-image: url("../imagenes/botones/cargar.png");
+}
+#comprar{
+	background-image: url("../imagenes/botones/comprar.png");
+}
+#cambiarCSS{
+	background-image: url("../imagenes/botones/cambiar.png");
+
+}
+.botones {
+	background-color: transparent;
+	background-size: cover;
+	padding: 0px;
+	width: 80px;
+	height: 80px;
+}
+.radioChico{
+	border-radius: 15px;	
+}
+.radioGrande{
+	border-radius: 50px;	
 }

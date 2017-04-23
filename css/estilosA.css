@@ -8,16 +8,15 @@ header{
 }
 
 h1{
-	font-family:'Helvetica','Verdana','Monaco',sans-serif;
+	font-family:'Verdana';
 }
 
 body{
 
 	background-image: url(../imagenes/cafe3.jpg);
+	background-attachment: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
-	 
-	
 }
 
 #navegacion{
@@ -110,12 +109,57 @@ div{
    	background-color: #aaaaaa;
 
 }
+#borrar{
+	background-image: url("../imagenes/botones/borrar.png");
+}
+#guardar{
+	background-image: url("../imagenes/botones/guardar.png");
+}
+#cargar{
+	background-image: url("../imagenes/botones/cargar.png");
+}
+#comprar{
+	background-image: url("../imagenes/botones/comprar.png");
+}
+#cambiarCSS{
+	background-image: url("../imagenes/botones/cambiar.png");
 
-button{
+}
+.botones {
+	background-color: transparent;
+	background-size: cover;
+	padding: 0px;
+	width: 80px;
+	height: 80px;
+}
+.radioChico{
+	border-radius: 15px;	
+}
+.radioGrande{
+	border-radius: 50px;	
+}
+.radioChico{
+	border-radius: 5px;	
+}
+.radioGrande{
+	border-radius: 70px;	
+}
 
-	background-color: #CBEDFD;
-	border:solid;
-	font-family: Verdana, Helvetica; 
-	font-style: bold;
-	border-radius: 5px;
+h1{
+	text-align: left;
+	
+	line-height: 90px;
+}
+@media all and (min-width: 767px) {
+
+    h1 {
+      font-size: 8vw;
+    }
+}
+
+@media all and (max-width: 767px) {
+
+    h1 {
+      font-size: 14vw;
+    }
 }
