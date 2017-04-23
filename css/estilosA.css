@@ -86,7 +86,7 @@ body{
 #navegacion{
 	background-color:transparent;
 	padding-top: 7px;
-		padding-bottom: 7px;
+	padding-bottom: 7px;
 
 	border: 1px solid #fff;
 	border-radius: 10px;
@@ -278,7 +278,7 @@ padding: 0px 0px 0px 0px;
 	color:white;
 	font-style: oblique;
 	margin: 1px;
-	margin-bottom: 3px;
+	margin-bottom: 1px;
 	font-size: 4.3vw;
 	padding: 7px;
 }
