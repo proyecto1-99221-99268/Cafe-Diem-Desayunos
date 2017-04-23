@@ -7,8 +7,64 @@ header{
 	
 }
 
+h4{
+	font-family: smile;
+	font-size: 35px;
+}
+
 h1{
 	font-family:'Verdana';
+}
+
+h3{
+	font-family: smile;
+	font-size:40px;
+	color: white;
+}
+.navClass{
+	color:white;
+	font-size: 21px;
+	font-family: gh;
+}
+
+@font-face {
+    font-family: gh;
+    src: url(../fuentes/GrandHotel-Regular.ttf);
+}
+@font-face {
+    font-family: smile;
+    src: url(../fuentes/Smiley.ttf);
+}
+
+
+@font-face {
+    font-family: junction;
+    src: url(../fuentes/Junction_02.ttf);
+}
+h1{
+	text-align: left;
+	font-family: gh;
+	line-height: 90px;
+}
+#logoDIV{
+    	margin-top: 5px; 
+    }
+@media all and (min-width: 767px) {
+
+    h1 {
+      font-size: 8vw;
+    }
+}
+
+@media all and (max-width: 767px) {
+
+    #logoDIV{
+    	display: none;
+    	margin-top: 5px; 
+    }
+    h1 {
+      font-size: 14vw;
+    }
 }
 
 body{
@@ -21,28 +77,33 @@ body{
 
 #navegacion{
 	background-color:transparent;
+	padding-top: 7px;
+		padding-bottom: 7px;
+
+	border: 1px solid #fff;
+	border-radius: 10px;
 }
 
 
  
-.main{
-	background: silver;
-}
+ 
 
 
 
 #miCanvas{
-	border: 1px solid #000;
+	border: 5px solid #fff;
+	border-radius: 15px;
 	background-color: silver;
+	background-image: url("../imagenes/corcho.jpg");
+	background-size: cover;
 }
 
-.color1{
-	background: #34495e;
-	color: #fff;
-}
+
 aside{
-	background: transparent;
+	background-color: #82abab;
 	color: #000;
+	border: 5px solid #fff;
+	border-radius: 15px;
 
 
 }
@@ -54,6 +115,7 @@ footer{
 	background-color: #000;
 	color: #fff;
 	height: 50px;
+	border-radius:10px 10px 0px 0px;
 
 }
 
@@ -83,7 +145,8 @@ div{
 	background-color: #00000f;
 }
 .precioPorUnidad{
-	color : black;
+	color : white;
+	font-size: 18px;
 }
 
 

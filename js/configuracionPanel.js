@@ -1,14 +1,10 @@
-//var desayunoPersonalizado=[];
 var desayunos   = [];
 var seleccionado = "b0";
-// =new Object();""
 var capas = [];
 var opcionesTotales=[];
 var escenario;
 var opcionesDesayunos=[];
 var precio=0;
-//var desayunoElegido=[]; //para clasico, especial y matero
-//var opcionesElegido=[];
 
 var todoslosdesayunos=[];
 var predefinidos=[];
@@ -64,7 +60,6 @@ function cargar(){
 				desayunoPersonalizado[i]=arreglo;
 			}
 			opcionesDesayunos["b0"]=desayunoPersonalizado;
-		//opcionesDesayunos["b0"]=desayunoPersonalizado;  //????????????????
 		}
 	
 	else
@@ -127,7 +122,7 @@ function mostrarPredefinido(N,setearceldas){
 }
 function configurarTipoDesayuno(event){
 	var target=event.target;
-	console.log(target.id);
+	//console.log(target.id);
 	$(".DP").removeClass("active");
 	seleccionado = target.id;
 	prepararCanvas(target.id);
@@ -154,6 +149,8 @@ function mostrar(){
 	$("#comprar").click(comprar);
 	$("#guardar").click(guardar);
 	$("#cargar").click(recuperar);
+	
+  	
 
 	var n = document.getElementById("miCanvas").offsetWidth;
 	cargar();
@@ -387,9 +384,6 @@ function comprar(){
 	dialogo.setAttribute("id", "facebox");
 	dialogo.setAttribute("title", "Tu compra..");
 
-
-
-
 	midesayuno=opcionesDesayunos[seleccionado];
 
 	tabla=document.createElement("TABLE");
@@ -424,29 +418,11 @@ function comprar(){
 
 	dialogo.appendChild(tabla);
 	document.body.appendChild(dialogo);
-	//document.getElementById("cartel").appendChild(dialogo);
 	
-	// $( "#dialog" ).dialog({
- //      //smodal: true,
- //      buttons: {
- //        Ok: function() {
- //          $( this ).dialog( "close" );
- //        }
- //      }
-
- //    });
-
- 	jQuery.facebox({div:'#facebox'});
+	jQuery.facebox({div:'#facebox'});
 	document.body.removeChild(dialogo);
-
-  	
-
-	//$( "#dialog" ).dialog();
-// 	<div id="dialog" title="Basic dialog">
-//   <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
-// </div>
-
 }
+
 function guardar(){
 	var myJSON = localStorage.getItem("desayuno");
 	//if (myJSON != null)
@@ -457,11 +433,12 @@ function guardar(){
 	//}
 	//console.log(localStorage.getItem("desayuno"));
 }
+
 function recuperar(){
 	var myJSON = localStorage.getItem("desayuno");
 	if (myJSON != null){
 		 var desayunium = JSON.parse(myJSON);
-		console.log(JSON.stringify(desayunium));	
+		//console.log(JSON.stringify(desayunium));	
 		opcionesDesayunos["b0"]=desayunium;
 		prepararCanvas("b0");
 	}

@@ -8,28 +8,41 @@ header{
 }
 
 h4{
-	font-family: "Verdana";
-	font-style: oblique;
+	font-family: smile;
+	font-size: 35px;
 }
 #logo{
 	float:left;
 
 }
-
+.navClass{
+	color:white;
+	font-size: 21px;
+	font-family: gh;
+}
+.nav-pills>li.active>a:hover{
+	color:black;
+	background-color: #ece;
+}
+.nav-pills>li.active>a{
+	background-color: black;
+	color:red;
+}
+h3{
+	font-family: smile;
+	font-size:40px;
+}
 body{
 	background-image: url("../imagenes/fondo.jpg");
 	background-attachment: fixed;
 }
-.main{
-	background: #eddbc3;
-}
-.color1{
-	background: #34495e;
-	color: #fff;
-}
+
+
 aside{
 	background:#d94c3a;
 	color: #fff;
+	border: 2px solid #fff;
+	border-radius: 5px;
 
 
 }
@@ -39,6 +52,8 @@ aside{
 footer{
 	background: black;
 	color: white;
+	border-radius:10px 10px 0px 0px;
+	margin-top: 10px;
 }
 
 .barra {
@@ -70,12 +85,15 @@ footer{
 .imagen{
 	width:8em ;
 	height: 8em;
+	padding: 3px;
 	background-color: #000;
 }
 
 #miCanvas{
-	border: 1px solid #000;
-	
+	border: 2px solid #000;
+	border-radius: 5px;
+	background-image: url("../imagenes/fondoCanvas.jpg");
+	background-size: cover;
 
 
 }
@@ -107,15 +125,35 @@ padding: 0px 0px 0px 0px;
 #precio{
 	color: #fff;
 	font-size: 20px;
-	 
+}
+.precioPorUnidad{
+	color: #fff;
+	font-family: smile;
+	font-size: 25px;
+	font-style: bold;
+}
+@font-face {
+    font-family: gh;
+    src: url(../fuentes/GrandHotel-Regular.ttf);
+}
+@font-face {
+    font-family: smile;
+    src: url(../fuentes/Smiley.ttf);
+}
 
+
+@font-face {
+    font-family: junction;
+    src: url(../fuentes/Junction_02.ttf);
 }
 h1{
 	text-align: left;
-	
+	font-family: gh;
 	line-height: 90px;
 }
-
+#logoDIV{
+    	margin-top: 5px; 
+    }
 @media all and (min-width: 767px) {
 
     h1 {
@@ -125,6 +163,10 @@ h1{
 
 @media all and (max-width: 767px) {
 
+    #logoDIV{
+    	display: none;
+    	margin-top: 5px; 
+    }
     h1 {
       font-size: 14vw;
     }

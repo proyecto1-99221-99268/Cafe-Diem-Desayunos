@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Desayunet</title>
+	<title>Cafe Diem</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<!-- <link rel="stylesheet" type="text/css" href="css/facebox.css"> -->
@@ -11,7 +11,7 @@
 
 	<link rel="stylesheet" src="css/jquery-ui.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  	<script src="js/jquery-ui.js"></script>
+  	<script src="js/jquery-ui.min.js"></script>
   	<script src="js/kinetic-v5.1.0.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/facebox-bootstrap.js"></script>
@@ -29,11 +29,11 @@
 	<div class="container">
 		<header>
 			<div class="container">
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<img id="logo" src="img/logo.png" alt="Logo desayunet: desayunos a medida" height="150" width="200" >
+				<div id="logoDIV" class="col-xs-12 col-sm-6 col-md-6">
+					<img id="logo" src="img/logo.png" alt="Logo desayunet: desayunos a medida" height="160" width="230" >
 				</div>
 				<div class="contenedorH1 col-xs-12 col-sm-6 col-md-6">
-					<h1>Desayunet</h1>
+					<h1>Cafe Diem</h1>
 				<div>
 			</div>
 			<div>
@@ -56,12 +56,12 @@
 			</div>
 			<aside class=" col-xs-12 col-sm-6 col-md-6">
 				<ul class="nav nav-pills">
-				  <li class="active"><a data-toggle="pill" href="#Bebidas">Bebidas</a></li>
-				  <li><a data-toggle="pill" href="#Frutas">Frutas</a></li>
-				  <li><a data-toggle="pill" href="#Dulces">Dulces</a></li>
-				  <li><a data-toggle="pill" href="#PYD">Panadería/Confitería</a></li>
-				  <li><a data-toggle="pill" href="#Taza">Taza</a></li>
-				  <li><a data-toggle="pill" href="#Bandeja">Bandeja</a></li>
+				  <li class="active"><a class="navClass" data-toggle="pill" href="#Bebidas">Bebidas</a></li>
+				  <li><a data-toggle="pill"  class="navClass" href="#Frutas">Frutas</a></li>
+				  <li><a data-toggle="pill" class="navClass" href="#Dulces">Dulces</a></li>
+				  <li><a data-toggle="pill" class="navClass" href="#PYD">Panadería/Confitería</a></li>
+				  <li><a data-toggle="pill" class="navClass" href="#Taza">Taza</a></li>
+				  <li><a data-toggle="pill" class="navClass" href="#Bandeja">Bandeja</a></li>
 				</ul>
 
 				<div class="tab-content">
@@ -104,27 +104,27 @@
 					Total $0.00
 				</div>
 				<div  class="col-xs-3 col-sm-3 col-md-2">
-					<button id="comprar" class="botones radioGrande"></button>
+					<button id="comprar" alt="comprar"  title="Comprar" class="botones radioGrande"></button>
 				</div>
 				<div  class="col-xs-3  col-sm-3 col-md-2">
-					<button id="guardar" class="botones radioGrande"></button>
+					<button id="guardar"  alt="guardar" title="Guardar desayuno" class="botones radioGrande"></button>
 				</div>
 				<div  class="col-xs-3  col-sm-3 col-md-2">
-					<button id="cargar" class="botones radioGrande"></button>
+					<button id="cargar" alt="cargar" title="Cargar desayuno guardado" class="botones radioGrande"></button>
 				</div>
 				<div  class="col-xs-3  col-sm-3 col-md-2">
-					<button id="borrar" class="botones radioGrande"></button>
+					<button id="borrar" alt="borrar" title="Borrar" class="botones radioGrande"></button>
 				</div>
 			</div>
 			<div id="cambiarCSSDIV" class="col-xs-12 col-sm-6 col-md-6">
-				<button id="cambiarCSS" class="pull-right botones radioGrande" class="botones "></button>
+				<button id="cambiarCSS" title="¡Cambiar apariencia!" class="pull-right botones radioGrande" class="botones "></button>
 			</div>
 		</div>
 		<div id="cartel"></div> 	
 		
 		<footer>
-			<div class="container">
-				<a href="readme.txt"> readme </a>
+			<div id="readme" class="container">
+				<a href="readme.html"> readme </a>
 			</div>
 		</footer>
 	</div>
