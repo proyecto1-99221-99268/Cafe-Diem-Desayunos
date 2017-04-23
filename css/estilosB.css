@@ -43,6 +43,7 @@ aside{
 	color: #fff;
 	border: 2px solid #fff;
 	border-radius: 5px;
+	margin-bottom: 5px;
 
 
 }
@@ -57,7 +58,6 @@ footer{
 }
 
 .barra {
-	background: #8B4513;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -65,16 +65,16 @@ footer{
 	background-color: transparent;
 }
 .botonesBarra{
-	background: #FFDEAD;
-	color: #AF3333;
+	background: #dcc19d;
+	color: #39251c;
 	font-family: verdana;
-	font-size: 20px; 
+	
 }
 .botonesBarra:hover{
 	background: #D2691E;
 	color: #320000;
-	font-family: verdana;
-	font-size: 20px; 
+	
+	 
 }
 /*.botonesBarra:active{
 	background: #A0522D;
@@ -82,12 +82,7 @@ footer{
 
 }
 */
-.imagen{
-	width:8em ;
-	height: 8em;
-	padding: 3px;
-	background-color: #000;
-}
+
 
 #miCanvas{
 	border: 2px solid #000;
@@ -159,10 +154,27 @@ h1{
     h1 {
       font-size: 8vw;
     }
+        .sizeLetra{
+    	font-size: 26px; 
+    }
+    .imagen{
+	width:12vw ;
+	height: 12vw;
+	padding: 3px;
+	background-color: #000;
+}
 }
 
 @media all and (max-width: 767px) {
-
+	.imagen{
+		width: 25vw ;
+		height: 25vw;
+		padding: 3px;
+		background-color: #000;
+	}
+    .sizeLetra{
+    	font-size: 4.3vw; 
+    }
     #logoDIV{
     	display: none;
     	margin-top: 5px; 
@@ -199,4 +211,28 @@ h1{
 }
 .radioGrande{
 	border-radius: 50px;	
+}
+.noPaddingLeft{
+	padding-left: 0px;
+}
+.PaddingLeft{
+	padding-left: 5px;
+}
+.noPaddingCostado{
+	padding-left: 1px;
+	padding-right: 1px;
+	text-align: center;
+}
+.footerA{
+	text-align: center;
+	margin: 0px;
+	padding-top: 3px;	
+	font-family: gh;
+	font-size: 25px;
+}
+.dam{
+	text-align: right;
+}
+.mt5{
+	margin-top: 5px;
 }

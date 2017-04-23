@@ -378,6 +378,7 @@ function crearDesayuno(bn) {
 function comprar(){
 	var  midesayuno, i, j, micateg, catOpTo, nombre, preciop;
 	var dialogo, fila, tabla, cnombre, cprecio;
+	var producto, precioProducto;
 
 	dialogo=document.createElement("DIV");
 	dialogo.setAttribute("class", "cartel");
@@ -387,6 +388,14 @@ function comprar(){
 	midesayuno=opcionesDesayunos[seleccionado];
 
 	tabla=document.createElement("TABLE");
+	fila=document.createElement("TR");
+	producto=document.createElement("TD");
+	precioProducto=document.createElement("TD");
+	producto.innerHTML="Producto";
+	precioProducto.innerHTML="Precio";
+	fila.appendChild(producto);
+	fila.appendChild(precioProducto);
+	tabla.appendChild(fila);
 
 
 	for(i=0; i<midesayuno.length; i++){
@@ -398,10 +407,11 @@ function comprar(){
 				preciop=catOpTo[j].precioPorUnidad;
 			//	console.log("Nombre: "+nombre+" Precio: "+preciop+"...");
 				fila=document.createElement("TR");
+				
 				cnombre=document.createElement("TD");
 				cprecio=document.createElement("TD");
 				cnombre.innerHTML=nombre;
-				cprecio.innerHTML=preciop;
+				cprecio.innerHTML="$ "+preciop;
 				fila.appendChild(cnombre);
 				fila.appendChild(cprecio);
 				tabla.appendChild(fila);
@@ -411,8 +421,11 @@ function comprar(){
 	}
 	fila=document.createElement("TR");
 	precioTotal=document.createElement("TD");
-	precioTotal.innerHTML="precio total = $"+precio;
+	precioTotal.innerHTML="precio total = $";
+	precioCelda=document.createElement("TD");
+	precioCelda.innerHTML=precio;
 	fila.appendChild(precioTotal);
+	fila.appendChild(precioCelda);
 	tabla.appendChild(fila);
 
 
