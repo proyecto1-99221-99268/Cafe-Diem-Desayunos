@@ -245,6 +245,10 @@ h1{
 	font-family: gh;
 	font-size: 25px;
 }
+.noPadding{
+padding: 0px 0px 0px 0px;
+
+}
 .noPaddingLeft{
 	padding-left: 0px;
 }
@@ -258,4 +262,16 @@ h1{
 }
 .mt5{
 	margin-top: 5px;
+}
+#navegacion{
+	margin-bottom: 2px;
+}
+.presentacion{
+	background: black;
+	color:white;
+	font-style: oblique;
+	margin: 1px;
+	margin-bottom: 3px;
+	font-size: 4.3vw;
+	padding: 7px;
 }

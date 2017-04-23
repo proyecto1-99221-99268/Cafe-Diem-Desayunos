@@ -15,6 +15,9 @@ h4{
 	float:left;
 
 }
+#navegacion{
+	margin-bottom: 2px;
+}
 .navClass{
 	color:white;
 	font-size: 21px;
@@ -113,8 +116,8 @@ padding: 0px 0px 0px 0px;
 }
 
 .resaltar:hover {
-   	background-color: #aaaaaa;
-
+   	background-color: #B3794E;
+   	
 }
 
 #precio{
@@ -125,7 +128,7 @@ padding: 0px 0px 0px 0px;
 	color: #fff;
 	font-family: smile;
 	font-size: 25px;
-	font-style: bold;
+	font-weight: bold;
 }
 @font-face {
     font-family: gh;
@@ -144,7 +147,6 @@ padding: 0px 0px 0px 0px;
 h1{
 	text-align: left;
 	font-family: gh;
-	line-height: 90px;
 }
 #logoDIV{
     	margin-top: 5px; 
@@ -175,6 +177,10 @@ h1{
     .sizeLetra{
     	font-size: 4.3vw; 
     }
+    .dam{
+	text-align: right;
+	display: none;
+	}	
     #logoDIV{
     	display: none;
     	margin-top: 5px; 
@@ -235,4 +241,11 @@ h1{
 }
 .mt5{
 	margin-top: 5px;
+}
+.presentacion{
+	color:white;
+	font-style: oblique;
+	margin: 1px;
+	font-size: 4.3vw;
+	padding: 10px;
 }

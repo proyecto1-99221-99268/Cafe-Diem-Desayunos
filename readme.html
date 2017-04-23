@@ -4,63 +4,66 @@
 
 	<title>Cafe Diem - leeme</title>
 	<link rel="stylesheet" type="text/css" href="css/readme.css"> 
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+
 </head>
 <body>
 <h1>
-IngenierÌa de Aplicaciones Web<br>
+Ingenier√≠a de Aplicaciones Web<br>
 Proyecto 1
 </h1>
 <h3>
-ComisiÛn 703:
-	AndrÈs MartÌnez, 99268
+Comisi√≥n 703:
+	Andr√©s Mart√≠nez, 99268
 	Marina Razuc, 99221
 </h3>
 <p>
-Se decidiÛ desarrollar una p·gina que le permita al usuario personalizar un desayuno.
-Al acceder a la p·gina, el usuario podr· encontrarse un panel vacÌo, en donde se mostrar·n los productos que ir·n conformando el desayuno. TambiÈn podr· apreciarse otro panel con las siguientes categorÌas: Bebidas, Frutas, Dulces, PanaderÌa y ConfiterÌa, Taza, y Bandeja, y los productos disponibles por cada una de ellas.
+Se decidi√≥ desarrollar una p√°gina que le permita al usuario personalizar un desayuno.
+Al acceder a la p√°gina, el usuario podr√° encontrarse un panel vac√≠o, en donde se mostrar√°n los productos que ir√°n conformando el desayuno. Tambi√©n podr√° apreciarse otro panel con las siguientes categor√≠as: Bebidas, Frutas, Dulces, Panader√≠a y Confiter√≠a, Taza, y Bandeja, y los productos disponibles por cada una de ellas.
 </p>
 <p>
-Al principio la intenciÛn era que el usuario pueda seleccionar distintas cantidades de cada producto disponible, pero por recomendaciÛn de la c·tedra y para no aumentar la complejidad de la p·gina, se decidiÛ permitir como m·ximo un producto de los disponibles en el desayuno.
+Al principio la intenci√≥n era que el usuario pueda seleccionar distintas cantidades de cada producto disponible, pero por recomendaci√≥n de la c√°tedra y para no aumentar la complejidad de la p√°gina, se decidi√≥ permitir como m√°ximo un producto de los disponibles en el desayuno.
 </p>
 
 <p>
-De cada categorÌa el usuario podr· elegir todas las opciones disponibles, excepto en las categorÌas Taza y Bandeja, donde sÛlo podr· elegirse un producto como m·ximo. 
+De cada categor√≠a el usuario podr√° elegir todas las opciones disponibles, excepto en las categor√≠as Taza y Bandeja, donde s√≥lo podr√° elegirse un producto como m√°ximo. 
 </p>
 <p>
-Por defecto, la p·gina muestra el desayuno personalizado y vacÌo, pero el usuario tendr· la posibilidad de cargar desayunos predefinidos, en este caso, el Cl·sico, el Especial, y el Matero. Al seleccionar alguno de estos, en el panel vacÌo aparecer·n todos los productos asociados a ese desayuno. Si el usuario quiere agregar, quitar o cambiar alg˙n producto perteneciente al mismo, la p·gina cambiar· directamente a la opciÛn de desayuno personalizado, y se reflejar·n los cambios realizados por el usuario en el panel donde se representa el desayuno.
+Por defecto, la p√°gina muestra el desayuno personalizado y vac√≠o, pero el usuario tendr√° la posibilidad de cargar desayunos predefinidos, en este caso, el Cl√°sico, el Especial, y el Matero. Al seleccionar alguno de estos, en el panel vac√≠o aparecer√°n todos los productos asociados a ese desayuno. Si el usuario quiere agregar, quitar o cambiar alg√∫n producto perteneciente al mismo, la p√°gina cambiar√° directamente a la opci√≥n de desayuno personalizado, y se reflejar√°n los cambios realizados por el usuario en el panel donde se representa el desayuno.
 </p>
 <p>
-Mientras el usuario elige o descarta productos del desayuno, tambiÈn podr· observarse el cambio en el precio total del mismo.
-El usuario puede guardar la configuraciÛn de un desayuno personalizado (botÛn azul), y al revisitar la p·gina en otra ocasiÛn, puede recuperar dicha configuraciÛn (botÛn verde). La configuraciÛn guardar· las posiciones de las imagenes originales, no las que el usuario elija. El usuario adem·s podr· borrar todo el panel conteniendo el desayuno si lo desea con un sÛlo click (botÛn rojo), y tambiÈn podr· simular la opciÛn de comprar el desayuno (botÛn violeta), mostrando una lista con cada producto elegido y su precio.
+Mientras el usuario elige o descarta productos del desayuno, tambi√©n podr√° observarse el cambio en el precio total del mismo.
+El usuario puede guardar la configuraci√≥n de un desayuno personalizado (bot√≥n azul), y al revisitar la p√°gina en otra ocasi√≥n, puede recuperar dicha configuraci√≥n (bot√≥n verde). La configuraci√≥n guardar√° las posiciones de las imagenes originales, no las que el usuario elija. El usuario adem√°s podr√° borrar todo el panel conteniendo el desayuno si lo desea con un s√≥lo click (bot√≥n rojo), y tambi√©n podr√° simular la opci√≥n de comprar el desayuno (bot√≥n violeta), mostrando una lista con cada producto elegido y su precio.
 </p>
 <p>
-La p·gina tiene dos apariencias o estilos distintos disponibles, los cuales son persistentes, es decir, si el usuario cierra la p·gina con el estilo A presente, al volver a cargar la p·gina, tendr· el estilo A. Los mismos pueden cambiarse clickeando el botÛn de colores situado en la esquina inferior derecha de la p·gina.
+La p√°gina tiene dos apariencias o estilos distintos disponibles, los cuales son persistentes, es decir, si el usuario cierra la p√°gina con el estilo A presente, al volver a cargar la p√°gina, tendr√° el estilo A. Los mismos pueden cambiarse clickeando el bot√≥n de colores situado en la esquina inferior derecha de la p√°gina.
 </p>
 <p>
-El panel conteniendo los productos del desayuno en cuestiÛn fue implementado con un canvas, especÌficamente, el Kinetic canvas, que resultÛ ser el de m·s utilidad al momento de trabajar. Se crea un escenario (Stage) cuyo contenido es el panel, y se crea un canvas  de ancho y alto del panel. Para "pintar" el canvas se utilizÛ un esquema de capas, es decir, una capa por imagen, para facilitar el mostrar o borrar una imagen seg˙n el producto asociado se elige o se deselecciona. Se decidiÛ permitir al usuario cambiar la posiciÛn de los productos seleccionados (o los predefinidos) dentro del canvas. La capa perteneciente a la imagen de la bandeja se lleva hacia atr·s, para que no tape a ninguno de los dem·s productos. Al trabajar con capas tambiÈn se facilita la acciÛn de borrado, es decir, cuando el usuario decide borrar todos los productos del desayuno actual, se eliminan todas las capas del canvas. Otra caracterÌstica del canvas es que se redibuja cuando el tamaÒo de la ventana cambia. Esto permite que si el usuario cambia de tamaÒo el dibujo se podr· seguir viendo correctamente. El tamaÒo de cada imagen y su posiciÛn son relativos, no absolutos. Dependen del tamaÒo del canvas.
+El panel conteniendo los productos del desayuno en cuesti√≥n fue implementado con un canvas, espec√≠ficamente, el Kinetic canvas, que result√≥ ser el de m√°s utilidad al momento de trabajar. Se crea un escenario (Stage) cuyo contenido es el panel, y se crea un canvas  de ancho y alto del panel. Para "pintar" el canvas se utiliz√≥ un esquema de capas, es decir, una capa por imagen, para facilitar el mostrar o borrar una imagen seg√∫n el producto asociado se elige o se deselecciona. Se decidi√≥ permitir al usuario cambiar la posici√≥n de los productos seleccionados (o los predefinidos) dentro del canvas. La capa perteneciente a la imagen de la bandeja se lleva hacia atr√°s, para que no tape a ninguno de los dem√°s productos. Al trabajar con capas tambi√©n se facilita la acci√≥n de borrado, es decir, cuando el usuario decide borrar todos los productos del desayuno actual, se eliminan todas las capas del canvas. Otra caracter√≠stica del canvas es que se redibuja cuando el tama√±o de la ventana cambia. Esto permite que si el usuario cambia de tama√±o el dibujo se podr√° seguir viendo correctamente. El tama√±o de cada imagen y su posici√≥n son relativos, no absolutos. Dependen del tama√±o del canvas.
 </p>
 <p>
-Las categorÌas de los diferentes productos del desayuno y dichos productos fueron almacenados como esquemas de JSON. Adem·s est·n almacenadas las propiedades de cada producto, como su nombre, su categorÌa, su precio, la ruta de su imagen y otras caracterÌsticas necesarias al momento de pintar la imagen en el canvas. Esto facilita el agregado, modificaciÛn de las caracterÌsticas o borrado de cada producto.
+Las categor√≠as de los diferentes productos del desayuno y dichos productos fueron almacenados como esquemas de JSON. Adem√°s est√°n almacenadas las propiedades de cada producto, como su nombre, su categor√≠a, su precio, la ruta de su imagen y otras caracter√≠sticas necesarias al momento de pintar la imagen en el canvas. Esto facilita el agregado, modificaci√≥n de las caracter√≠sticas o borrado de cada producto.
 </p>
 <p>
-Para implementar el panel de configuraciÛn del desayuno se utilizÛ una tabla, la cual se crea din·micamente, teniendo en cuenta las categorÌas y productos presentes en el esquema JSON. En un primer momento se habÌa implementado un "drag and drop" para que el usuario pueda arrastar los productos desde la tabla hacia el canvas, pero se permitÌa poner m·s de una unidad por producto en el desayuno, y eso no era lo buscado. En otra soluciÛn, una vez puesto el producto en el canvas, desaparecÌa de la tabla, y no quedaba muy estÈtico. Entonces se decidiÛ utlizar celdas con checkboxes, excepto en las categorÌas Taza y Bandeja, donde se utilizaron celdas con radio buttons, ya que, como se mencionÛ anteriormente, se puede seleccionar como m·ximo un producto de esas categorÌas.
+Para implementar el panel de configuraci√≥n del desayuno se utiliz√≥ una tabla, la cual se crea din√°micamente, teniendo en cuenta las categor√≠as y productos presentes en el esquema JSON. En un primer momento se hab√≠a implementado un "drag and drop" para que el usuario pueda arrastar los productos desde la tabla hacia el canvas, pero se permit√≠a poner m√°s de una unidad por producto en el desayuno, y eso no era lo buscado. En otra soluci√≥n, una vez puesto el producto en el canvas, desaparec√≠a de la tabla, y no quedaba muy est√©tico. Entonces se decidi√≥ utlizar celdas con checkboxes, excepto en las categor√≠as Taza y Bandeja, donde se utilizaron celdas con radio buttons, ya que, como se mencion√≥ anteriormente, se puede seleccionar como m√°ximo un producto de esas categor√≠as.
 </p>
 <p>
-Para guardar el estilo elegido por el usuario se utiliza LocalStorage. TambiÈn se utilizÛ para guardar la configuraciÛn del desayuno armado, si es que el usuario lo requiere.
+Para guardar el estilo elegido por el usuario se utiliza LocalStorage. Tambi√©n se utiliz√≥ para guardar la configuraci√≥n del desayuno armado, si es que el usuario lo requiere.
 </p>
 <p>
-Se utilizaron librerÌas de bootstrap, jquery, javascript
+Se utilizaron librer√≠as de bootstrap, jquery, javascript
 Bootstrap: bootstrap.min.css, bootstrap.min.js, facebox-bootstrap.js, 
 JQuery: jquery-ui.css, jquery.min.js, jquery-ui.js, 
 Javascript: kinetic-v5.1.0.min.js.
-TambiÈn las siguientes fuentes:
+Tambi√©n las siguientes fuentes:
 Grand Hotel, Junction y Smiley.
 </p>
 <p>
 
 Bugs conocidos:
-Se notÛ que la carga del canvas presenta algunos problemas cuando se abre la ventana de inspecciÛn. A veces sucede que al abrir dicha ventana y seguir modificando el desayuno, los cambios se reflejan con cierta demora, incluso hay casos en los que es necesario seguir clickeando otros productos para que los cambios se vean.
-Otro bug es que en la tabla de categorÌas, en uno de los estilos, cuando se elige una opciÛn se queda pintada de azul, lo cual no deberÌa suceder. Vuelve a su color cuando se realiza un click. 
+Se not√≥ que la carga del canvas presenta algunos problemas cuando se abre la ventana de inspecci√≥n. A veces sucede que al abrir dicha ventana y seguir modificando el desayuno, los cambios se reflejan con cierta demora, incluso hay casos en los que es necesario seguir clickeando otros productos para que los cambios se vean.
+Otro bug es que en la tabla de categor√≠as, en uno de los estilos, cuando se elige una opci√≥n se queda pintada de azul, lo cual no deber√≠a suceder. Vuelve a su color cuando se realiza un click. 
 </p>
 
 </body>

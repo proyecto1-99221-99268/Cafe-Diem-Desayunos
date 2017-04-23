@@ -407,7 +407,6 @@ function comprar(){
 				preciop=catOpTo[j].precioPorUnidad;
 			//	console.log("Nombre: "+nombre+" Precio: "+preciop+"...");
 				fila=document.createElement("TR");
-				
 				cnombre=document.createElement("TD");
 				cprecio=document.createElement("TD");
 				cnombre.innerHTML=nombre;
